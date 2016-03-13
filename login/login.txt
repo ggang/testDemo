@@ -1,0 +1,17 @@
+*** Settings ***
+Documentation     用例层
+Library           Selenium2Library
+Resource          ../mykeyword.txt.txt
+Resource          ../flow.txt
+Resource          ../Template.txt
+
+*** Test Cases ***
+login
+    [Documentation]    登录测试用例
+    [Setup]
+    [Template]    登录测试
+    [Timeout]    5 seconds
+    admin    123456    pass
+    admin    123    faiiled
+    ad    123456    failed
+    [Teardown]    测试失败时调用

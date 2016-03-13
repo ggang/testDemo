@@ -1,0 +1,12 @@
+*** Settings ***
+Resource          mykeyword.txt.txt
+Resource          pageObject.txt
+Resource          flow.txt
+
+*** Keywords ***
+登录测试
+    [Arguments]    ${username}    ${password}    ${expected}
+    [Documentation]    模板
+    登录流程    ${username}    ${password}
+    登录检查    ${expected}
+    关闭浏览器

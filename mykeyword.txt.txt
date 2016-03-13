@@ -1,0 +1,35 @@
+*** Settings ***
+Documentation     交互层，存放控件
+Library           Selenium2Library
+
+*** Keywords ***
+打开浏览器
+    [Arguments]    ${base_url}
+    open browser    ${base_url}
+
+关闭浏览器
+    close browser
+
+输入用户名
+    [Arguments]    ${username}
+    input text    id=kw    ${username}
+
+输入密码
+    [Arguments]    ${pwd}
+    input \ text    pasword    ${pwd}
+
+点击登录
+    click button    button
+
+结束IEDriver
+
+检查登录是否成功
+    sleep    3
+    page should contain link    退出
+
+检查登录失败
+    ${msg}    get alert message
+    should be equal    ${msg}    登录失败，请检查您的用户名
+
+测试失败时调用
+    run keyword if test failed    关闭浏览器
