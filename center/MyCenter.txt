@@ -1,2 +1,3 @@
 *** Test Cases ***
 mycenter
+    进入个人中心流程

@@ -11,3 +11,10 @@ Variables         conf/test_conf.py
     打开浏览器    ${base_url}
     点击进入登录页面
     登录页面    ${user_name}    ${password}
+
+进入个人中心流程
+    [Arguments]    ${username}    ${password}    ${expected}
+    登录流程    ${username}    ${password}
+    登录检查    ${expected}
+    进入个人中心
+    检查进入个人中心是否成功

@@ -16,3 +16,6 @@ Resource          mykeyword.txt.txt
     ...    如果需要检查登录失败请写“failed”
     run keyword if    '${excepted}'=='pass'    检查登录是否成功
     run keyword if    '${excepted}'=='failed'    检查登录失败
+
+进入个人中心
+    点击我的钢钢网
