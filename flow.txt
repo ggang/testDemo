@@ -2,9 +2,12 @@
 Documentation     场景，功能
 Resource          mykeyword.txt.txt
 Resource          pageObject.txt
+Variables         conf/test_conf.py
 
 *** Keywords ***
 登录流程
     [Arguments]    ${user_name}    ${password}
-    打开浏览器    http://www.baidu.com
+    [Documentation]    登录场景的封装
+    打开浏览器    ${base_url}
+    进入登录页面
     登录页面    ${user_name}    ${password}

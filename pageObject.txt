@@ -5,6 +5,7 @@ Resource          mykeyword.txt.txt
 *** Keywords ***
 登录页面
     [Arguments]    ${user_name}    ${password}
+    [Documentation]    登录页面
     输入用户名    ${user_name}
     输入密码    ${password}
     点击登录
@@ -13,5 +14,5 @@ Resource          mykeyword.txt.txt
     [Arguments]    ${excepted}
     [Documentation]    检查登录是否成功、如欲购需要检查登录成功参数请写PASS
     ...    如果需要检查登录失败请写“failed”
-    run keyword if     '${excepted}'=='pass'    检查登录是否成功
-    run keyword if    '${expected}'=='failed'    检查登录失败
+    run keyword if    '${excepted}'=='pass'    检查登录是否成功
+    run keyword if    '${excepted}'=='failed'    检查登录失败

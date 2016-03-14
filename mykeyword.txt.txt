@@ -12,16 +12,15 @@ Library           Selenium2Library
 
 输入用户名
     [Arguments]    ${username}
-    input text    id=kw    ${username}
+    input text    id=txtUsrName    ${username}
 
 输入密码
     [Arguments]    ${pwd}
-    input \ text    pasword    ${pwd}
+    input text    xpath=//input[@type="password"]    ${pwd}
 
 点击登录
-    click button    button
-
-结束IEDriver
+    [Documentation]    点击登录按钮
+    click button    id=btnLogin
 
 检查登录是否成功
     sleep    3
@@ -29,7 +28,10 @@ Library           Selenium2Library
 
 检查登录失败
     ${msg}    get alert message
-    should be equal    ${msg}    登录失败，请检查您的用户名
+    should be equal    ${msg}    用户名或密码不正确
 
 测试失败时调用
     run keyword if test failed    关闭浏览器
+
+进入登录页面
+    click element    xpath= //input[@value="登录"]

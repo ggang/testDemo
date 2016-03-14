@@ -10,8 +10,7 @@ login
     [Documentation]    登录测试用例
     [Setup]
     [Template]    登录测试
-    [Timeout]    5 seconds
-    admin    123456    pass
-    admin    123    faiiled
-    ad    123456    failed
+    [Timeout]
+    13611873856    123456    failed
+    1361184    112    failed
     [Teardown]    测试失败时调用
