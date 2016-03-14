@@ -33,5 +33,16 @@ Library           Selenium2Library
 测试失败时调用
     run keyword if test failed    关闭浏览器
 
-进入登录页面
+点击进入登录页面
     click element    xpath= //input[@value="登录"]
+
+点击我的资源库
+    [Documentation]    个人中心-点击我的资源库的链接
+    click link    text=我的资源库
+
+点击我的钢钢网
+    click link    text=我的钢钢网
+
+检查进入个人中心是否成功
+    ${title}    get title
+    should be equal    ${title}    钢钢网-会员中心
