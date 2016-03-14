@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation     这里定义模板：这个层封装了测试方法
 Resource          mykeyword.txt.txt
 Resource          pageObject.txt
 Resource          flow.txt
