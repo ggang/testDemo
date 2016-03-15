@@ -23,8 +23,7 @@ Library           Selenium2Library
     click button    id=btnLogin
 
 检查登录是否成功
-    sleep    3
-    page should contain link    退出
+    wait until page contains element    id=btnLogOut    8
 
 检查登录失败
     ${msg}    get alert message
@@ -41,8 +40,12 @@ Library           Selenium2Library
     click link    text=我的资源库
 
 点击我的钢钢网
-    click link    text=我的钢钢网
+    click element    xpath=/html/body/div[1]/div/div[2]/a[1]
 
 检查进入个人中心是否成功
+    select window    title=钢钢网-会员中心
     ${title}    get title
     should be equal    ${title}    钢钢网-会员中心
+
+全屏操作
+    Maximize browser window

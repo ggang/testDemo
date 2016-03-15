@@ -1,3 +1,14 @@
+*** Settings ***
+Resource          ../Template.txt
+Variables         ../conf/test_conf.py
+
 *** Test Cases ***
 mycenter
-    进入个人中心流程
+    个人中心测试    ${username}    ${password}    ${result}
+
+test_modiy_info
+    [Tags]    一般
+    [Template]    完善个人信息测试
+    张三    女    钢钢网    上海    上海    漕河泾开发区    471618565
+    ...    pass
+    [Teardown]    测试失败时调用

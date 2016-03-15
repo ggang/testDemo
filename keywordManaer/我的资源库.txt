@@ -1,0 +1,106 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+点击详情链接
+    click link    xpath=/html/body/div[4]/div[2]/div/ul/li[2]/p[2]/a[2]
+
+输入查询条件
+    [Arguments]    ${product_name}
+    input text    id=ProductName    ${product_name}
+
+选择产品状态
+    [Arguments]    ${value}
+    select from list    selStatus    ${value}
+
+点击查询
+    click button    id=btnSearch
+
+点击单条添加
+    click element    xpath=//input[@value="单条添加"]
+
+点击批量添加
+    click element    xpath=//input[@value="批量添加"]
+
+点击上传资源记录单
+    click element    xpath=//*[@id="fromplsc"]/a
+
+点击下载
+    click element    xpath=/html/body/div[4]/div[2]/div[2]/div[1]/ul/li[1]/a
+
+点击选择文件
+    click element    id=fuUpload
+
+上传文件
+    click element    id=btnOk
+
+选择清空历史资源
+    click element    id=ckDeleteResource
+
+选择不清空历史资源
+    click element    id=ckResource
+
+点击发布资源
+    click element    id=Release
+
+选择品类
+    [Arguments]    ${value}
+     select from list    xpath=//select[@class="ProductType"]    ${value}
+
+输入品名
+    [Arguments]    ${product_name}
+    input text    id=txtProductName    ${product_name}
+
+输入规格
+    [Arguments]    ${guige}
+    input text    id=txtSpecification    ${guige}
+
+输入材质
+    [Arguments]    ${caizhi}
+    input text    id=txtMaterial    ${caizhi}
+
+输入钢厂
+    [Arguments]    ${factory}
+    input text    id=txtFactory    ${factory}
+
+输入件数
+    [Arguments]    ${number}
+    input text    id=txtNumber    ${number}
+
+输入体重
+    [Arguments]    ${price}
+    input text    id=txtPiece    ${price}
+
+输入供货地
+    [Arguments]    ${city}
+    input text    id=txtCity    ${city}
+
+输入仓库
+    [Arguments]    ${hose}
+    input text    id=txtWareHouse    ${hose}
+
+输入库存
+    [Arguments]    ${wight}
+    input text    id=txtWeight    ${wight}
+
+输入单价
+    [Arguments]    ${price}
+    input text    id=txtPrice    ${price}
+
+点击保存
+    click element    xpath= //*[@id="retb"]/tr[1]/td[14]/a[@value="保存"]
+
+选中删除
+    click element    id=delete
+
+选中挂牌
+    click element    id=Listing
+
+选中下架
+    click element    id=shelf
+
+选择下架品种
+    click element    xpath=//input[@value="22652073"]
+
+点击修改
+    click element    xpath=//*[@id="retb"]/tr[1]/td[14]/input[@value="修改"]

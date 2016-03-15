@@ -1,6 +1,8 @@
 *** Settings ***
 Documentation     页面对象：主要封装纯业务逻辑以及检查各页面
 Resource          mykeyword.txt.txt
+Resource          keywordManaer/完善个人中心.txt
+Resource          keywordManaer/修改密码.txt
 
 *** Keywords ***
 登录页面
@@ -12,10 +14,35 @@ Resource          mykeyword.txt.txt
 
 登录检查
     [Arguments]    ${excepted}
-    [Documentation]    检查登录是否成功、如欲购需要检查登录成功参数请写PASS
+    [Documentation]    检查登录是否成功、需要检查登录成功参数请写pass
     ...    如果需要检查登录失败请写“failed”
     run keyword if    '${excepted}'=='pass'    检查登录是否成功
     run keyword if    '${excepted}'=='failed'    检查登录失败
 
 进入个人中心
+    全屏操作
     点击我的钢钢网
+
+完善信息页面
+    [Arguments]    ${username}    ${sex}    ${company}    ${province}    ${city}    ${address}
+    ...    ${qq}
+    输入姓名    ${username}
+    选择性别    ${sex}
+    输入公司名称    ${company}
+    选择省份    ${province}
+    选择城市    ${city}
+    通讯地址    ${address}
+    输入常用QQ    ${qq}
+    选择经营范围
+    点击保存
+
+完善信息检查
+    [Arguments]    ${excpeted}
+    run keyword if    '${excpeted}'=='pass'    点击确定按钮
+    run keyword if    '${excpeted}'=='failed'    检查是否保存失败
+
+修改密码
+    [Arguments]    ${old_password}    ${new_password}    ${conform}
+    输入原密码    ${old_password}
+    输入新密码    ${new_password}
+    输入确认密码    ${conform}
