@@ -1,0 +1,27 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+输入原密码
+    [Arguments]    ${oldPassword}
+    input text    name=passOld    ${oldPassword}
+
+输入新密码
+    [Arguments]    ${newPassword}
+    input text    name="passNew"    ${newPassword}
+
+输入确认密码
+    [Arguments]    ${pwd_confirm}
+    input text    name=passNewCheck    ${pwd_confirm}
+
+点击确定按钮
+    click button    xpath=//input[@vlaue="确定"]
+
+点击取消按钮
+    click button    xpath=//input[@value="取消"]
+
+为空判断
+    page should contain    不能为空
+
+新密码与密码不一致
+    page should contain    密码不一致

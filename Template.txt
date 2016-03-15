@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     这里定义模板：这个层封装了测试方法
+Documentation     这里定义模板：这个层封装了测试方法且加入了断言
 Resource          mykeyword.txt.txt
 Resource          pageObject.txt
 Resource          flow.txt
@@ -10,4 +10,18 @@ Resource          flow.txt
     [Documentation]    模板
     登录流程    ${username}    ${password}
     登录检查    ${expected}
+    关闭浏览器
+
+个人中心测试
+    [Arguments]    ${username}    ${password}    ${excpeted}
+    进入个人中心流程    ${username}    ${password}    ${excpeted}
+    检查进入个人中心是否成功
+    关闭浏览器
+
+完善个人信息测试
+    [Arguments]    ${username}    ${sex}    ${company}    ${province}    ${city}    ${address}
+    ...    ${qq}    ${expected}
+    完善个人信息流程    ${username}    ${sex}    ${company}    ${province}    ${city}    ${address}
+    ...    ${qq}
+    完善信息检查    ${expected}
     关闭浏览器

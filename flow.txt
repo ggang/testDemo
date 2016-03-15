@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     场景，功能
+Documentation     场景，功能，流程
 Resource          mykeyword.txt.txt
 Resource          pageObject.txt
 Variables         conf/test_conf.py
@@ -17,4 +17,12 @@ Variables         conf/test_conf.py
     登录流程    ${username}    ${password}
     登录检查    ${expected}
     进入个人中心
+
+完善个人信息流程
+    [Arguments]    ${username}    ${sex}    ${company}    ${province}    ${city}    ${address}
+    ...    ${qq}
+    进入个人中心流程    ${login_user}    ${password}    ${result}
     检查进入个人中心是否成功
+    点击完善信息按钮
+    完善信息页面    ${username}    ${sex}    ${company}    ${province}    ${city}    ${address}
+    ...    ${qq}

@@ -1,2 +1,5 @@
-__all__ = ['base_url']
-base_url='http://localhost:8080'
+__all__ = ['base_url','user_name','password','result']
+base_url='http://www.ggang.cn/'
+user_name='13611873856'
+password='123456'
+result='pass'
