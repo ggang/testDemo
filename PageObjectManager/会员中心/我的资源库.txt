@@ -1,0 +1,50 @@
+*** Settings ***
+Resource          ../../keywordManaer/我的资源库.txt
+
+*** Keywords ***
+查询产品资源库
+    [Arguments]    ${product_name}    ${product_status}
+    [Tags]    高
+    输入品名    ${product_name}
+    选择产品状态    ${product_status}
+    点击查询
+
+单条添加
+    [Arguments]    ${product_type}    ${product_name}    ${Specification}    ${material}    ${factory}    ${num}
+    ...    ${address}    ${house}    ${weight}    ${price}
+    选择品类    ${product_type}
+    输入品名    ${product_name}
+    输入规格    ${Specification}
+    输入材质    ${material}
+    输入钢厂    ${factory}
+    输入件数    ${num}
+    输入供货地    ${address}
+    输入仓库    ${house}
+    输入库存    ${weight}
+    输入单价    ${price}
+    点击保存
+
+批量添加
+
+上传资源单记录
+
+修改产品信息
+
+选中删除
+
+选中挂牌
+
+选中下架
+
+产品资源查询检查
+    [Arguments]    ${expected_row}    ${expected}
+    [Documentation]    此关键字：输入参数：expetected,expected_rows
+    ...    expected :是用例测试结果，属于自己定义，非程序内容
+    ...    exptected_rows :是期望查询出的行数
+    run keyword if    '${expected}'=='成功查询'    查询成功结果检查    ${expected_row}
+    run keyword if    '${expected}'=='查询失败'    查询失败结果检查    ${expected_row}
+
+检查单条添加是否成功
+    [Arguments]    ${expected}    ${product_type}
+    run keyword if    '${expected}'=='添加成功'    查询成功结果检查    ${product_type}
+    run keyword if    '${expected}'=='添加失败'    查询失败结果检查    ${product_type}

@@ -1,19 +1,21 @@
 *** Settings ***
-Documentation     这里定义模板：这个层封装了测试方法且加入了断言
-Resource          mykeyword.txt.txt
+Documentation     这里定义模板：这个层封装了flow层，以及 pageObject封装的断言
 Resource          pageObject.txt
 Resource          flow.txt
+Resource          PageObjectManager/会员中心/我的资源库.txt
 
 *** Keywords ***
 登录测试
     [Arguments]    ${username}    ${password}    ${expected}
-    [Documentation]    模板
+    [Documentation]    登录模板
+    [Tags]    高
     登录流程    ${username}    ${password}
     登录检查    ${expected}
     关闭浏览器
 
 个人中心测试
     [Arguments]    ${username}    ${password}    ${excpeted}
+    [Tags]    一般
     进入个人中心流程    ${username}    ${password}    ${excpeted}
     检查进入个人中心是否成功
     关闭浏览器
@@ -21,7 +23,44 @@ Resource          flow.txt
 完善个人信息测试
     [Arguments]    ${username}    ${sex}    ${company}    ${province}    ${city}    ${address}
     ...    ${qq}    ${expected}
+    [Tags]    一般
     完善个人信息流程    ${username}    ${sex}    ${company}    ${province}    ${city}    ${address}
     ...    ${qq}
     完善信息检查    ${expected}
+    关闭浏览器
+
+修改密码测试
+    [Arguments]    ${older}    ${new}    ${confirm}    ${expected}
+    [Documentation]    密码检查， （此参数是测试时使用，并非程序的提示语）
+    ...    expected参数值请传入：
+    ...    1. '密码修改成功'
+    ...    2.'新密码不能为空'
+    ...    3.确认密码不能为空'
+    [Tags]    高
+    修改密码流程    ${older}    ${new}    ${confirm}
+    密码检查    ${expected}
+    关闭浏览器
+
+查询产品资源库测试
+    [Arguments]    ${product_name}    ${product_status}    ${expected}    ${expected_rows}
+    [Documentation]    查询资源库检查，输入参数：expetected,expected_rows
+    ...    expected :是用例测试结果，属于自己定义，非程序内容
+    ...    输入内容为：1.成功查询
+    ...    2.查询失败
+    ...    exptected_rows :是期望查询出的行数
+    [Tags]    高
+    查询产品资源库流程    ${product_name}    ${product_status}
+    产品资源查询检查    ${expected}    ${expected_rows}
+    会员登录.关闭浏览器
+
+单条添加测试
+    [Arguments]    ${product_type}    ${product_name}    ${Specification}    ${material}    ${factory}    ${num}
+    ...    ${address}    ${house}    ${weight}    ${price}    ${expected}    ${product_type}
+    [Documentation]    单条添加测试，其中的 expected 参数可输入情况：
+    ...    1.添加成功
+    ...    2.添加失败
+    [Tags]    高
+    单条添加流程    ${product_type}    ${product_name}    ${Specification}    ${material}    ${factory}    ${num}
+    ...    ${address}    ${house}    ${weight}    ${price}
+    检查单条添加是否成功    ${expected}    ${product_type}
     关闭浏览器
