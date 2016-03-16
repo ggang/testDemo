@@ -1,15 +1,16 @@
 *** Settings ***
 Documentation     用例层
 Library           Selenium2Library
-Resource          ../mykeyword.txt.txt
+Resource          ../keywordManaer/会员登录.txt
 Resource          ../flow.txt
 Resource          ../Template.txt
 
 *** Test Cases ***
 login
-    [Documentation]    登录测试用例：主要输入具体的测试用例
+    [Documentation]    登录测试
+    [Tags]    高
     [Setup]
     [Template]    登录测试
     [Timeout]
-    13611873856    123456
-    [Teardown]    测试失败时调用
+    13611873856    123456    pass
+    [Teardown]    会员登录.测试失败时调用

@@ -1,8 +1,12 @@
 *** Settings ***
 Documentation     场景，功能，流程
-Resource          mykeyword.txt.txt
+Resource          keywordManaer/完善个人中心.txt
+Resource          keywordManaer/修改密码.txt
+Resource          keywordManaer/会员登录.txt
 Resource          pageObject.txt
 Variables         conf/test_conf.py
+Resource          keywordManaer/我的资源库.txt
+Resource          PageObjectManager/会员中心/我的资源库.txt
 
 *** Keywords ***
 登录流程
@@ -14,6 +18,7 @@ Variables         conf/test_conf.py
 
 进入个人中心流程
     [Arguments]    ${username}    ${password}    ${expected}
+    [Documentation]    进入个人中心流程
     登录流程    ${username}    ${password}
     登录检查    ${expected}
     进入个人中心
@@ -26,3 +31,34 @@ Variables         conf/test_conf.py
     点击完善信息按钮
     完善信息页面    ${username}    ${sex}    ${company}    ${province}    ${city}    ${address}
     ...    ${qq}
+
+修改密码流程
+    [Arguments]    ${older}    ${new}    ${confirm}
+    进入个人中心流程    ${login_user}    ${password}    ${result}
+    检查进入个人中心是否成功
+    等待账户设置列表加载
+    点击进入修改密码页面
+    修改密码    ${older}    ${new}    ${confirm}
+    修改密码.点击确定按钮
+
+查询产品资源库流程
+    [Arguments]    ${product_name}    ${product_statu}
+    进入个人中心流程    ${login_user}    ${password}    ${result}
+    检查进入个人中心是否成功
+    等待会员中心列表加载
+    点击进入我的资源库
+    sleep    3
+    查询产品资源库    ${product_name}    ${product_statu}
+
+单条添加流程
+    [Arguments]    ${product_type}    ${product_name}    ${Specification}    ${material}    ${factory}    ${num}
+    ...    ${address}    ${house}    ${weight}    ${price}
+    进入个人中心流程    ${login_user}    ${password}    ${result}
+    检查进入个人中心是否成功
+    等待会员中心列表加载
+    点击进入我的资源库
+    sleep    3
+    点击单条添加
+    单条添加    ${product_type}    ${product_name}    ${Specification}    ${material}    ${factory}    ${num}
+    ...    ${address}    ${house}    ${weight}    ${price}
+    log    ${product_type}

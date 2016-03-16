@@ -8,7 +8,7 @@ Library           Selenium2Library
     open browser    ${base_url}
 
 关闭浏览器
-    close browser
+    close all browsers
 
 输入用户名
     [Arguments]    ${username}

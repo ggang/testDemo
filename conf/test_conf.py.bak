@@ -1,5 +1,5 @@
-__all__ = ['base_url','user_name','password','result']
+__all__ = ['base_url','login_user','password','result']
 base_url='http://www.ggang.cn/'
-user_name='13611873856'
-password='123456'
+login_user='13611873856'
+password='1234567'
 result='pass'

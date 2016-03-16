@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation     页面对象：主要封装纯业务逻辑以及检查各页面
-Resource          mykeyword.txt.txt
 Resource          keywordManaer/完善个人中心.txt
 Resource          keywordManaer/修改密码.txt
+Resource          keywordManaer/会员登录.txt
 
 *** Keywords ***
 登录页面
@@ -38,7 +38,7 @@ Resource          keywordManaer/修改密码.txt
 
 完善信息检查
     [Arguments]    ${excpeted}
-    run keyword if    '${excpeted}'=='pass'    点击确定按钮
+    run keyword if    '${excpeted}'=='pass'    完善个人中心.点击确定按钮
     run keyword if    '${excpeted}'=='failed'    检查是否保存失败
 
 修改密码
@@ -46,3 +46,9 @@ Resource          keywordManaer/修改密码.txt
     输入原密码    ${old_password}
     输入新密码    ${new_password}
     输入确认密码    ${conform}
+
+密码检查
+    [Arguments]    ${expected}
+    run keyword if    '${expected}'=='密码修改成功'    检查修改密码是否成功
+    run keyword if    '${expected}'=='新密码不能为空'    密码为空判断
+    run keyword if    '${expected}'=='确认密码不能为空'    密码为空判断
