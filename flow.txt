@@ -52,13 +52,31 @@ Resource          PageObjectManager/会员中心/我的资源库.txt
 
 单条添加流程
     [Arguments]    ${product_type}    ${product_name}    ${Specification}    ${material}    ${factory}    ${num}
-    ...    ${address}    ${house}    ${weight}    ${price}
+    ...    ${txtpipce}    ${address}    ${house}    ${weight}    ${price}
     进入个人中心流程    ${login_user}    ${password}    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
     sleep    3
     点击单条添加
+    sleep    3
     单条添加    ${product_type}    ${product_name}    ${Specification}    ${material}    ${factory}    ${num}
-    ...    ${address}    ${house}    ${weight}    ${price}
-    log    ${product_type}
+    ...    ${txtpipce}    ${address}    ${house}    ${weight}    ${price}
+
+选中删除流程
+    进入个人中心流程    ${login_user}    ${password}    ${result}
+    检查进入个人中心是否成功
+    等待会员中心列表加载
+    点击进入我的资源库
+    sleep    3
+    删除产品信息
+
+选中修改流程
+    [Arguments]    ${txtWeight}
+    [Documentation]    本关键字主要修改产品的库存进行修改
+    进入个人中心流程    ${login_user}    ${password}    ${result}
+    检查进入个人中心是否成功
+    等待会员中心列表加载
+    点击进入我的资源库
+    sleep    3
+    修改产品信息    ${txtWeight}

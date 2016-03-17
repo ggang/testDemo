@@ -34,7 +34,7 @@ Resource          keywordManaer/会员登录.txt
     通讯地址    ${address}
     输入常用QQ    ${qq}
     选择经营范围
-    点击保存
+    完善个人中心.点击保存
 
 完善信息检查
     [Arguments]    ${excpeted}
