@@ -1,6 +1,8 @@
 *** Settings ***
 Library           Selenium2Library
 
+*** Variables ***
+
 *** Keywords ***
 点击详情链接
     click link    xpath=/html/body/div[4]/div[2]/div/ul/li[2]/p[2]/a[2]
@@ -31,7 +33,7 @@ Library           Selenium2Library
 点击选择文件
     click element    id=fuUpload
 
-上传文件
+点击上传文件按钮
     click element    id=btnOk
 
 选择清空历史资源
@@ -152,3 +154,11 @@ Library           Selenium2Library
     [Arguments]    ${modiy_weight}
     ${value}    get element attribute    //*[@id="retb"]/tr[1]/td[11]/input@value
     should be equal    ${value}    ${modiy_weight}
+
+判断是否成功进入上传页面
+    wait until page contains element    id=btnOk
+
+上传文件
+    [Arguments]    ${upload_dir}
+    [Documentation]    上传文件
+    choose file    id=fuUpload    ${upload_dir}
