@@ -11,26 +11,31 @@ Resource          ../../keywordManaer/我的资源库.txt
 
 单条添加
     [Arguments]    ${product_type}    ${product_name}    ${Specification}    ${material}    ${factory}    ${num}
-    ...    ${address}    ${house}    ${weight}    ${price}
+    ...    ${txtpipce}    ${address}    ${house}    ${weight}    ${price}
     选择品类    ${product_type}
     输入品名    ${product_name}
+    log    ${product_name}
     输入规格    ${Specification}
     输入材质    ${material}
     输入钢厂    ${factory}
     输入件数    ${num}
+    输入件重    ${txtpipce}
     输入供货地    ${address}
     输入仓库    ${house}
     输入库存    ${weight}
     输入单价    ${price}
-    点击保存
+    我的资源库.点击保存
 
 批量添加
 
 上传资源单记录
 
 修改产品信息
-
-选中删除
+    [Arguments]    ${txtweight}
+    选中第一条记录
+    点击第一条记录修改按钮
+    修改库存量的值    ${txtweight}
+    点击第一条保存按钮
 
 选中挂牌
 
@@ -45,6 +50,20 @@ Resource          ../../keywordManaer/我的资源库.txt
     run keyword if    '${expected}'=='查询失败'    查询失败结果检查    ${expected_row}
 
 检查单条添加是否成功
-    [Arguments]    ${expected}    ${product_type}
-    run keyword if    '${expected}'=='添加成功'    查询成功结果检查    ${product_type}
-    run keyword if    '${expected}'=='添加失败'    查询失败结果检查    ${product_type}
+    [Arguments]    ${expected}    ${product_name}
+    run keyword if    '${expected}'=='添加成功'    检验单条是否成功    ${product_name}
+    run keyword if    '${expected}'=='添加失败'    查询失败结果检查    ${product_name}
+
+检查修改是否成功
+    [Arguments]    ${expected}    ${weight}
+    sleep    2
+    run keyword if    '${expected}'=='修改成功'    检查第一条库存是否修改成功    ${weight}
+    run keyword if    '${expected}'=='重量只能输入整数或小数'    库存类型不正确检查
+
+检验是否删除成功
+    [Arguments]    ${expected}    ${product_name}
+    run keyword if    '${expected}'=='删除成功'    检查删除是否成功    ${product_name}
+
+删除产品信息
+    选中第一条记录
+    选中删除

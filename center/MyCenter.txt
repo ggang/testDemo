@@ -33,9 +33,17 @@ test_ziyuan_search
     \    挂牌    2    成功查询
     [Teardown]    测试失败时调用
 
-test_ziyuan_addSignal
-    [Tags]    高
+test_ziyuan_Singaladd
     [Template]    单条添加测试
-    中厚板    镀锌卷1    0.5*1250*c    DX51D+Z80    酒钢    3    3.56
-    ...    南京    25.6    20    添加成功    镀锌卷1
+    中厚板    镀锌卷1    0.5*1250*c    DX51D+Z80    酒钢    3    3
+    ...    上海    南京    25.6    20    添加成功    镀锌卷1
+    [Teardown]    测试失败时调用
+
+test_ziyuan_modify
+    [Template]    修改资源信息测试
+    1000    修改成功
+
+test_ziyuan_delete
+    [Template]    删除资源信息测试
+    删除成功    镀锌卷1
     [Teardown]    测试失败时调用
