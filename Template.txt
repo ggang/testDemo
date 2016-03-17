@@ -82,3 +82,7 @@ Resource          PageObjectManager/会员中心/我的资源库.txt
     选中删除流程
     检验是否删除成功    ${expected}    ${product_name}
     会员登录.关闭浏览器
+
+批量上传测试
+    [Arguments]    ${upload_dir}
+    批量上传流程    ${upload_dir}

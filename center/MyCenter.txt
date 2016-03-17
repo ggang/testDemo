@@ -47,3 +47,8 @@ test_ziyuan_delete
     [Template]    删除资源信息测试
     删除成功    镀锌卷1
     [Teardown]    测试失败时调用
+
+test_ziyuan_upload
+    ${dir}    set variable    ${CURDIR}${/}res${/}资源单模板.xls
+    log    ${dir}
+    批量上传测试    ${dir}
