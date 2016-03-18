@@ -7,6 +7,8 @@ Resource          pageObject.txt
 Variables         conf/test_conf.py
 Resource          keywordManaer/我的资源库.txt
 Resource          PageObjectManager/会员中心/我的资源库.txt
+Resource          PageObjectManager/会员中心/我的订单.txt
+Resource          keywordManaer/我的订单.txt
 
 *** Keywords ***
 登录流程
@@ -89,3 +91,56 @@ Resource          PageObjectManager/会员中心/我的资源库.txt
     点击进入我的资源库
     sleep    3
     批量添加    ${upload_dir}
+
+选中挂牌流程
+    进入个人中心流程    ${login_user}    ${password}    ${result}
+    检查进入个人中心是否成功
+    等待会员中心列表加载
+    点击进入我的资源库
+    sleep    3
+    选中资源挂牌
+
+选中下架流程
+    进入个人中心流程    ${login_user}    ${password}    ${result}
+    检查进入个人中心是否成功
+    等待会员中心列表加载
+    点击进入我的资源库
+    sleep    3
+    选中资源下架
+
+创建采购订单流程
+    [Arguments]    ${contact_person}    ${contact_mobile}    ${Invoice_Type}    ${Invoice_title}    ${province}    ${city}
+    ...    ${area}    ${address}    ${product_name}    ${specification}    ${material}    ${factory}
+    ...    ${num}
+    进入个人中心流程    ${login_user}    ${password}    ${result}
+    检查进入个人中心是否成功
+    等待我的订单列表成功加载
+    点击进入我的订单
+    检查是否成功进入订单页面
+    点击创建采购清单
+    等待进入创建订单页面
+    创建采购订单    ${contact_person}    ${contact_mobile}    ${Invoice_Type}    ${Invoice_title}    ${province}    ${city}
+    ...    ${area}    ${address}    ${product_name}    ${specification}    ${material}    ${factory}
+    ...    ${num}
+
+修改采购订单流程
+    [Arguments]    ${Invoice_title}
+    进入个人中心流程    ${login_user}    ${password}    ${result}
+    检查进入个人中心是否成功
+    等待我的订单列表成功加载
+    点击进入我的订单
+    检查是否成功进入订单页面
+    修改采购清单信息    ${Invoice_title}
+
+取消订单流程
+    [Arguments]    ${expected_option}
+    [Documentation]    expected_option ：此两个参数为测试人员自己定义的
+    ...    目前其输入值为：
+    ...    1.确定取消
+    ...    2.撤销取消
+    进入个人中心流程    ${login_user}    ${password}    ${result}
+    检查进入个人中心是否成功
+    等待我的订单列表成功加载
+    点击进入我的订单
+    检查是否成功进入订单页面
+    取消采购订单    ${expected_option}
