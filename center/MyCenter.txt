@@ -34,21 +34,61 @@ test_ziyuan_search
     [Teardown]    测试失败时调用
 
 test_ziyuan_Singaladd
+    [Documentation]    单条添加
+    [Tags]    高
     [Template]    单条添加测试
     中厚板    镀锌卷1    0.5*1250*c    DX51D+Z80    酒钢    3    3
     ...    上海    南京    25.6    20    添加成功    镀锌卷1
     [Teardown]    测试失败时调用
 
 test_ziyuan_modify
+    [Documentation]    单条修改
+    [Tags]    高
     [Template]    修改资源信息测试
     1000    修改成功
 
 test_ziyuan_delete
+    [Documentation]    单条删除
+    [Tags]    高
     [Template]    删除资源信息测试
     删除成功    镀锌卷1
     [Teardown]    测试失败时调用
 
 test_ziyuan_upload
-    ${dir}    set variable    ${CURDIR}${/}res${/}资源单模板.xls
-    log    ${dir}
-    批量上传测试    ${dir}
+    [Documentation]    批量上传
+    [Tags]    一般
+    ${dir}    set variable    ${CURDIR}${/}res${/}${upload_file}
+    批量上传测试    ${dir}    ${upload_file}
+    [Teardown]    测试失败时调用
+
+test_ziyuan_Listing
+    [Documentation]    资源挂牌测试
+    [Tags]    高
+    选中资源挂牌测试    下架
+    [Teardown]    测试失败时调用
+
+test_ziyuan_shelf
+    [Documentation]    资源下架测试
+    [Tags]    高
+    选中资源下架测试    挂牌
+    [Teardown]    测试失败时调用
+
+test_ziyuan_create_order
+    [Documentation]    创建采购订单测试
+    [Template]    创建采购订单测试
+    张三    13611873856    普通发票    钢钢网    上海市    上海市    徐汇区
+    ...    古美路    中厚板    0.5*1250*c    DX51D+Z80    杭钢    3.0
+    [Teardown]    测试失败时调用
+
+test_ziyuan_modify_order
+    [Documentation]    修改采购资源测试
+    [Template]    修改采购订单测试
+    钢钢网有限股份有限公司
+    宝钢有限股份有限公司
+    [Teardown]    测试失败时调用
+
+test_ziyuan_canle_order
+    [Documentation]    取消订单测试
+    [Template]    取消采购订单测试
+    确定取消
+    [Teardown]    测试失败时调用

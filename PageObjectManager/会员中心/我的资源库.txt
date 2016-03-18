@@ -42,10 +42,6 @@ Resource          ../../keywordManaer/我的资源库.txt
     修改库存量的值    ${txtweight}
     点击第一条保存按钮
 
-选中挂牌
-
-选中下架
-
 产品资源查询检查
     [Arguments]    ${expected_row}    ${expected}
     [Documentation]    此关键字：输入参数：expetected,expected_rows
@@ -72,3 +68,17 @@ Resource          ../../keywordManaer/我的资源库.txt
 删除产品信息
     选中第一条记录
     选中删除
+
+检查上下架是否成功
+    [Arguments]    ${current_status}
+    [Documentation]    这里的current_status :代表的是目前资源的状态
+    run keyword if    'current_status'=='挂牌'    检查下架是否成功
+    run keyword if    'current_status'=='下架'    检查上架是否成功
+
+选中资源挂牌
+    选中第一条记录
+    选中挂牌
+
+选中资源下架
+    选中第一条记录
+    选中下架

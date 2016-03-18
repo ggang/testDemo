@@ -162,3 +162,13 @@ Library           Selenium2Library
     [Arguments]    ${upload_dir}
     [Documentation]    上传文件
     choose file    id=fuUpload    ${upload_dir}
+
+检查上传资源成功判断
+    [Arguments]    ${filename}
+    wait until page contains    ${filename}
+
+检查下架是否成功
+    wait until element contains    xpath=//*[@id="retb"]/tr/td[13]    下架
+
+检查上架是否成功
+    wait until element contains    xpath=//*[@id="retb"]/tr/td[13]    上架
