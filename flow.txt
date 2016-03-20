@@ -14,7 +14,6 @@ Resource          keywordManaer/我的订单.txt
 登录流程
     [Arguments]    ${user_name}    ${password}
     [Documentation]    登录场景的封装
-    打开浏览器    ${base_url}
     点击进入登录页面
     登录页面    ${user_name}    ${password}
 
@@ -49,7 +48,7 @@ Resource          keywordManaer/我的订单.txt
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
-    sleep    3
+    等待产品输入框加载
     查询产品资源库    ${product_name}    ${product_statu}
 
 单条添加流程

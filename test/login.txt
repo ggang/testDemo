@@ -4,13 +4,16 @@ Library           Selenium2Library
 Resource          ../keywordManaer/会员登录.txt
 Resource          ../flow.txt
 Resource          ../Template.txt
+Resource          ../keywordManaer/公共关键字.txt
 
 *** Test Cases ***
 login
     [Documentation]    登录测试
     [Tags]    高
-    [Setup]
+    [Setup]    公共关键字.进入首页
     [Template]    登录测试
     [Timeout]
     13611873856    123456    pass
-    [Teardown]    会员登录.测试失败时调用
+    13611873856    123456    pass
+    136118738656    1234    failed
+    [Teardown]    会员登录.关闭浏览器

@@ -33,6 +33,7 @@ Library           Selenium2Library
     run keyword if test failed    关闭浏览器
 
 点击进入登录页面
+    wait until page contains element    xpath= //input[@value="登录"]    20    未成功进入登录首页
     click element    xpath= //input[@value="登录"]
 
 点击我的资源库
@@ -49,3 +50,11 @@ Library           Selenium2Library
 
 全屏操作
     Maximize browser window
+
+点击退出按钮
+    wait until page contains element    id=btnLogOut    20
+    click button    id= btnLogOut
+
+等待加载首页页面
+    [Arguments]    ${ecpected}
+    run keyword if    '${ecpected}'=='pass'    wait until page contains element    xpath= //input[@value="登录"]    20    首页未加载出来

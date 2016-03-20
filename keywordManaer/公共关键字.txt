@@ -1,0 +1,22 @@
+*** Settings ***
+Library           Selenium2Library
+Variables         ../conf/test_conf.py
+
+*** Keywords ***
+进入首页
+    open browser    ${base_url}
+
+点击钢钢网首页链接
+    [Arguments]    ${expected}
+    run keyword if    '${expected}'=='pass'    点击钢钢网首页
+    run keyword if    '${expected}'=='密码修改成功'    点击首页菜单
+    run keyword if    '${expected}'=='确认密码不能为空'    点击钢钢网首页
+    run keyword if    '${expected}'=='不能为空'    点击钢钢网首页
+    run keyword if    '${expected}'=='添加成功'    点击钢钢网首页
+
+点击首页菜单
+    Wait Until Page Contains    首页    30    首页加载失败
+    click link    首页
+
+点击钢钢网首页
+    click link    钢钢网首页
