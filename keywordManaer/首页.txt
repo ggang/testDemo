@@ -1,0 +1,34 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+点击去找货按钮
+    click button    path=//[@value="去找货"]
+
+点击申请商票贷
+    click button    xpath=//input[@value="申请商票贷"]
+
+点击更多（钢钢快报）
+    click link    http://www.ggang.cn/newskuaibao/Index/64
+
+点击快报最新一条信息
+    click link    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[1]/a
+
+点击更多（钢材推荐）
+    click link    http://res.ggang.cn/
+
+点击进入四方库按钮
+    click link    xpath=//input[@vlue="进入四方现货"]
+
+点击更多（大象钢票）
+    click link    http://bill.ggang.cn/
+
+点击立即申请按钮
+    click element    xpath=//input[@value="立即申请"]
+
+点击更多（小象快运）
+    click link    http://www.ggang.cn/logistics.html
+
+点击发货源按钮
+
+点击更多（四方资讯）
