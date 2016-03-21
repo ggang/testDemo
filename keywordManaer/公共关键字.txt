@@ -20,3 +20,34 @@ Variables         ../conf/test_conf.py
 
 点击钢钢网首页
     click link    钢钢网首页
+
+输入搜索条件
+    [Arguments]    ${serach}
+    input text    xpath=/html/body/div[2]/div/div[1]/div[1]/input[1]    ${serach}
+
+点击搜索按钮
+    click button    xpath=/html/body/div[2]/div/div[1]/div[1]/input[2]
+
+点击我要买货
+    click link    http://user.ggang.cn/AddPurchaseOrder/Index
+
+点击三级螺纹钢
+    click link    三级螺纹钢
+
+点击普卷
+    click link    普卷
+
+点击钢材库菜单
+    click link    钢材库
+
+点击四方现货菜单
+    click link    四方资讯
+
+点击大象钢票菜单
+    click link    大象钢票
+
+点击小象快运菜单
+    click link     小象快运
+
+招标中心菜单
+    click link    招标中心菜单
