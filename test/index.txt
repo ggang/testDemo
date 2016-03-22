@@ -1,0 +1,9 @@
+*** Settings ***
+Resource          ../Template.txt
+
+*** Test Cases ***
+test_search
+    [Setup]    公共关键字.进入首页
+    [Template]    首页搜索测试
+    低合金卷
+    [Teardown]    关闭浏览器

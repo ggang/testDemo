@@ -26,6 +26,7 @@ Variables         ../conf/test_conf.py
     input text    xpath=/html/body/div[2]/div/div[1]/div[1]/input[1]    ${serach}
 
 点击搜索按钮
+    wait until element is visible    xpath=/html/body/div[2]/div/div[1]/div[1]/input[2]    20    元素加载失败
     click button    xpath=/html/body/div[2]/div/div[1]/div[1]/input[2]
 
 点击我要买货
@@ -47,7 +48,12 @@ Variables         ../conf/test_conf.py
     click link    大象钢票
 
 点击小象快运菜单
-    click link     小象快运
+    click link    小象快运
 
 招标中心菜单
     click link    招标中心菜单
+
+检查是否成功进入钢材库页面
+    select window    title= 钢钢网-钢材库,以最快最便捷的方式找到你所需要的货物
+    ${title}    get title
+    should be equal    ${title}    钢钢网-钢材库,以最快最便捷的方式找到你所需要的货物

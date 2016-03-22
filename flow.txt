@@ -9,6 +9,7 @@ Resource          keywordManaer/我的资源库.txt
 Resource          PageObjectManager/会员中心/我的资源库.txt
 Resource          PageObjectManager/会员中心/我的订单.txt
 Resource          keywordManaer/我的订单.txt
+Resource          PageObjectManager/首页/公共.txt
 
 *** Keywords ***
 登录流程
@@ -143,3 +144,7 @@ Resource          keywordManaer/我的订单.txt
     点击进入我的订单
     检查是否成功进入订单页面
     取消采购订单    ${expected_option}
+
+搜索流程
+    [Arguments]    ${search_message}
+    搜索    ${search_message}

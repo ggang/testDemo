@@ -1,0 +1,10 @@
+*** Settings ***
+Resource          ../../keywordManaer/公共关键字.txt
+Resource          ../../keywordManaer/会员登录.txt
+
+*** Keywords ***
+搜索
+    [Arguments]    ${search_msg}
+    全屏操作
+    输入搜索条件    ${search_msg}
+    点击搜索按钮

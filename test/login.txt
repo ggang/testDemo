@@ -17,3 +17,10 @@ login
     13611873856    123456    pass
     136118738656    1234    failed
     [Teardown]    会员登录.关闭浏览器
+
+test_cookie
+    [Setup]    公共关键字.进入首页
+    登录测试    13611873856    123456    pass
+    ${cookie}    get cookies
+    log    ${cookie}
+    [Teardown]    关闭浏览器
