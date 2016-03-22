@@ -4,6 +4,7 @@ Resource          pageObject.txt
 Resource          flow.txt
 Resource          PageObjectManager/会员中心/我的资源库.txt
 Resource          keywordManaer/公共关键字.txt
+Resource          keywordManaer/钢材库.txt
 
 *** Keywords ***
 登录测试
@@ -135,3 +136,8 @@ Resource          keywordManaer/公共关键字.txt
     ...    2.撤销取消
     取消订单流程    ${excepted_option}
     关闭浏览器
+
+首页搜索测试
+    [Arguments]    ${search_message}
+    搜索流程    ${search_message}
+    检查是否成功进入钢材库页面

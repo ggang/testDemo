@@ -5,7 +5,7 @@ Resource          ../../keywordManaer/我的资源库.txt
 查询产品资源库
     [Arguments]    ${product_name}    ${product_status}
     [Tags]    高
-    输入品名    ${product_name}
+    输入查询品名    ${product_name}
     选择产品状态    ${product_status}
     点击查询
 

@@ -176,3 +176,7 @@ Library           Selenium2Library
 
 等待产品输入框加载
     wait until page contains element    id=ProductName    20    产品输入框未加载成功
+
+输入查询品名
+    [Arguments]    ${product_name}
+    input text    id=ProductName    ${product_name}
