@@ -57,3 +57,6 @@ Variables         ../conf/test_conf.py
     select window    title= 钢钢网-钢材库,以最快最便捷的方式找到你所需要的货物
     ${title}    get title
     should be equal    ${title}    钢钢网-钢材库,以最快最便捷的方式找到你所需要的货物
+
+切换窗口至首页
+    select window    title=钢钢网-找货,找钱,找车一站式服务,钢铁电商第四方平台

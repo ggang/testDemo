@@ -141,3 +141,10 @@ Resource          keywordManaer/钢材库.txt
     [Arguments]    ${search_message}
     搜索流程    ${search_message}
     检查是否成功进入钢材库页面
+
+钢钢快报链接测试
+    [Arguments]    ${link_num}
+    [Documentation]    ${link_num}:代表第几个Li
+    ${text}    点击快报流程    ${link_num}
+    检查链接是否进入了相应页面    ${text}
+    切换窗口至首页
