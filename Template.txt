@@ -145,6 +145,13 @@ Resource          keywordManaer/钢材库.txt
 钢钢快报链接测试
     [Arguments]    ${link_num}
     [Documentation]    ${link_num}:代表第几个Li
-    ${text}    点击快报流程    ${link_num}
+    ${text}    点击钢钢快报流程    ${link_num}
     检查链接是否进入了相应页面    ${text}
     切换窗口至首页
+
+四方咨询快报链接测试
+    [Arguments]    ${expected_status}
+    ${text}    点击四方快报咨询流程    ${expected_status}
+    @{list}    evaluate    '${text}'.split('\'')
+    log     @{list}
+    [Return]    ${text}

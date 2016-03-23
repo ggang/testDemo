@@ -19,3 +19,9 @@ test_ggkb
     4
     5
     [Teardown]    关闭浏览器
+
+test_zixun
+    [Setup]    公共关键字.进入首页
+    [Template]    四方咨询快报链接测试
+    1
+    [Teardown]    关闭浏览器
