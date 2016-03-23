@@ -1,0 +1,10 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+点击第一条咨询
+    wait until page contains element    xpath= /html/body/div[10]/div[2]/div[1]/div/div[1]/div/a    10    元素未加载
+    ${onlick}    Get Element Attribute    xpath= /html/body/div[10]/div[2]/div[1]/div/div[1]/div/a@onclick
+    log    ${onlick}
+    click element    xpath=/html/body/div[10]/div[2]/div[1]/div/div[1]/div/a
+    [Return]    ${onlick}

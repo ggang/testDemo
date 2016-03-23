@@ -4,7 +4,7 @@ Resource          ../../keywordManaer/公共关键字.txt
 Resource          ../../keywordManaer/会员登录.txt
 
 *** Keywords ***
-点击快报链接
+点击钢钢快报链接
     [Arguments]    ${expected_staus}
     全屏操作
     ${text}    run keyword if    '${expected_staus}'=='1'    获取并点击快报最新一条信息

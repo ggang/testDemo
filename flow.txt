@@ -11,6 +11,7 @@ Resource          PageObjectManager/会员中心/我的订单.txt
 Resource          keywordManaer/我的订单.txt
 Resource          PageObjectManager/首页/公共.txt
 Resource          PageObjectManager/首页/钢钢快报.txt
+Resource          PageObjectManager/首页/四方咨询.txt
 
 *** Keywords ***
 登录流程
@@ -150,7 +151,12 @@ Resource          PageObjectManager/首页/钢钢快报.txt
     [Arguments]    ${search_message}
     搜索    ${search_message}
 
-点击快报流程
+点击钢钢快报流程
+    [Arguments]    ${expected_staus}
+    ${text}    点击钢钢快报链接    ${expected_staus}
+    [Return]    ${text}
+
+点击四方快报咨询流程
     [Arguments]    ${expected_staus}
     ${text}    点击快报链接    ${expected_staus}
     [Return]    ${text}
