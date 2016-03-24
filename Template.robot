@@ -152,6 +152,5 @@ Resource          keywordManaer/钢材库.txt
 四方咨询快报链接测试
     [Arguments]    ${expected_status}
     ${text}    点击四方快报咨询流程    ${expected_status}
-    @{list}    evaluate    '${text}'.split('\'')
-    log     @{list}
+    ${url}    获取链接地址    ${text}
     [Return]    ${text}
