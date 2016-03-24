@@ -1,6 +1,6 @@
 *** Settings ***
-Resource          ../../keywordManaer/公共关键字.txt
-Resource          ../../keywordManaer/会员登录.txt
+Resource          ../../keywordManaer/公共关键字.robot
+Resource          ../../keywordManaer/会员登录.robot
 
 *** Keywords ***
 搜索

@@ -1,17 +1,17 @@
 *** Settings ***
 Documentation     场景，功能，流程
-Resource          keywordManaer/完善个人中心.txt
-Resource          keywordManaer/修改密码.txt
-Resource          keywordManaer/会员登录.txt
-Resource          pageObject.txt
+Resource          keywordManaer/完善个人中心.robot
+Resource          keywordManaer/修改密码.robot
+Resource          keywordManaer/会员登录.robot
+Resource          pageObject.robot
 Variables         conf/test_conf.py
-Resource          keywordManaer/我的资源库.txt
-Resource          PageObjectManager/会员中心/我的资源库.txt
-Resource          PageObjectManager/会员中心/我的订单.txt
-Resource          keywordManaer/我的订单.txt
-Resource          PageObjectManager/首页/公共.txt
-Resource          PageObjectManager/首页/钢钢快报.txt
-Resource          PageObjectManager/首页/四方咨询.txt
+Resource          keywordManaer/我的资源库.robot
+Resource          PageObjectManager/会员中心/我的资源库.robot
+Resource          PageObjectManager/会员中心/我的订单.robot
+Resource          keywordManaer/我的订单.robot
+Resource          PageObjectManager/首页/公共.robot
+Resource          PageObjectManager/首页/钢钢快报.robot
+Resource          PageObjectManager/首页/四方咨询.robot
 
 *** Keywords ***
 登录流程
@@ -158,5 +158,5 @@ Resource          PageObjectManager/首页/四方咨询.txt
 
 点击四方快报咨询流程
     [Arguments]    ${expected_staus}
-    ${text}    点击快报链接    ${expected_staus}
+    ${text}    四方咨询.点击快报链接    ${expected_staus}
     [Return]    ${text}

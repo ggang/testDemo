@@ -66,5 +66,5 @@ Library           Selenium2Library
 
 检查链接是否进入了相应页面
     [Arguments]    ${text}
-    select window     url=${text}
+    select window    url=${text}
     page should contain image    钢钢网

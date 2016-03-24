@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ../../keywordManaer/我的订单.txt
+Resource          ../../keywordManaer/我的订单.robot
 
 *** Keywords ***
 订单查询

@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation     页面对象：主要封装纯业务逻辑以及检查各页面
-Resource          keywordManaer/完善个人中心.txt
-Resource          keywordManaer/修改密码.txt
-Resource          keywordManaer/会员登录.txt
+Resource          keywordManaer/完善个人中心.robot
+Resource          keywordManaer/修改密码.robot
+Resource          keywordManaer/会员登录.robot
 
 *** Keywords ***
 登录页面
