@@ -1,10 +1,10 @@
 *** Settings ***
 Documentation     用例层
 Library           Selenium2Library
-Resource          ../keywordManaer/会员登录.txt
-Resource          ../flow.txt
-Resource          ../Template.txt
-Resource          ../keywordManaer/公共关键字.txt
+Resource          ../keywordManaer/会员登录.robot
+Resource          ../flow.robot
+Resource          ../Template.robot
+Resource          ../keywordManaer/公共关键字.robot
 
 *** Test Cases ***
 login

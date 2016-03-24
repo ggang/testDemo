@@ -1,6 +1,7 @@
 *** Settings ***
 Library           Selenium2Library
 Variables         ../conf/test_conf.py
+Library           ../until/constant.py
 
 *** Keywords ***
 进入首页
@@ -60,3 +61,11 @@ Variables         ../conf/test_conf.py
 
 切换窗口至首页
     select window    title=钢钢网-找货,找钱,找车一站式服务,钢铁电商第四方平台
+
+获取链接地址
+    [Arguments]    ${str}
+    [Documentation]    公共方法，获取链接地址，此方法专门针对：
+    ...    window.open('http://news.ggang.cn/News/Newsitem/105108') \ 这类的方法进行解析获取出相应的URL
+    ${list}    printList    ${str}
+    ${url}    set variable    ${list[1]}
+    [Return]    ${url}

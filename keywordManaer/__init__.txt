@@ -1,2 +1,0 @@
-*** Settings ***
-Documentation     存放控件层：里面存放捕获元素，操作元素等动作

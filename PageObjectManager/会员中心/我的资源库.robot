@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ../../keywordManaer/我的资源库.txt
+Resource          ../../keywordManaer/我的资源库.robot
 
 *** Keywords ***
 查询产品资源库

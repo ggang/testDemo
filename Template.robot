@@ -1,10 +1,10 @@
 *** Settings ***
 Documentation     这里定义模板：这个层封装了flow层，以及 pageObject封装的断言
-Resource          pageObject.txt
-Resource          flow.txt
-Resource          PageObjectManager/会员中心/我的资源库.txt
-Resource          keywordManaer/公共关键字.txt
-Resource          keywordManaer/钢材库.txt
+Resource          pageObject.robot
+Resource          flow.robot
+Resource          PageObjectManager/会员中心/我的资源库.robot
+Resource          keywordManaer/公共关键字.robot
+Resource          keywordManaer/钢材库.robot
 
 *** Keywords ***
 登录测试
@@ -150,8 +150,14 @@ Resource          keywordManaer/钢材库.txt
     切换窗口至首页
 
 四方咨询快报链接测试
-    [Arguments]    ${expected_status}
-    ${text}    点击四方快报咨询流程    ${expected_status}
-    @{list}    evaluate    '${text}'.split('\'')
-    log     @{list}
+    [Arguments]    ${expected_urllink}
+    [Documentation]    expected_urllink 代表要输入的链接的值
+    ...
+    ...    这里链接只有5个所以其输入值为：
+    ...
+    ...    1.2,3,4,5
+    ${text}    点击四方快报咨询流程    ${expected_urllink}
+    ${url}    获取链接地址    ${text}
+    检查是否正确链接到新闻页面    ${url}
+    切换窗口至首页
     [Return]    ${text}

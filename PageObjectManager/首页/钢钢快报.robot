@@ -1,7 +1,7 @@
 *** Settings ***
-Resource          ../../keywordManaer/首页.txt
-Resource          ../../keywordManaer/公共关键字.txt
-Resource          ../../keywordManaer/会员登录.txt
+Resource          ../../keywordManaer/首页.robot
+Resource          ../../keywordManaer/公共关键字.robot
+Resource          ../../keywordManaer/会员登录.robot
 
 *** Keywords ***
 点击钢钢快报链接
