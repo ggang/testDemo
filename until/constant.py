@@ -1,14 +1,23 @@
+# coding=utf-8
 #!/usr/bin/python
-# -*- coding: UTF-8 -*-
+
 import ConfigParser
 
 def printList(str):
+    """
+    split
+    return list
+    """
     s=str.split('\'')
     return s
 
-def ReadConfig(path,name,str):
+
+def ReadConfig(path,name,key):
+    """
+        retrun  key   value
+    """
+    #path='D:\\code\\testDemo\\conf\\url_xpath.ini'
     config = ConfigParser.ConfigParser()
     config.read(path)
-    url_path =config.get(name,str)
+    url_path =config.get(name,key)
     return url_path
-

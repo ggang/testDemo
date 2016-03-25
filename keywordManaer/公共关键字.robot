@@ -68,4 +68,23 @@ Library           ../until/constant.py
     ...    window.open('http://news.ggang.cn/News/Newsitem/105108') \ 这类的方法进行解析获取出相应的URL
     ${list}    printList    ${str}
     ${url}    set variable    ${list[1]}
+    log    ${url}
     [Return]    ${url}
+
+读取咨询快报URL地址
+    [Arguments]    ${link_key}
+    [Documentation]    获取URL
+    ${xpath}    Read config    ../conf/url_xpath.conf    zixun    ${link_key}
+    log    ${xpath}
+    [Return]    ${xpath}
+
+将滚动条拖到底部
+    Execute Javascript    document.documentElement.scrollTop=10000
+
+加入官网地址
+    [Arguments]    ${url}
+    ${final_url}    set variable    ${base_url}${url}
+    [Return]    ${final_url}
+
+关闭当前页面
+    close window
