@@ -4,7 +4,7 @@ Resource          ../../keywordManaer/公共关键字.robot
 Resource          ../../keywordManaer/会员登录.robot
 
 *** Keywords ***
-点击快报链接
+点击动态链接
     [Arguments]    ${url_link}
     全屏操作
     ${text}    run keyword if    '${url_link}'=='1'    四方咨询.点击并获取头条咨询
@@ -17,4 +17,10 @@ Resource          ../../keywordManaer/会员登录.robot
     ...    ELSE IF    '${url_link}'=='8'    四方咨询.点击并获取第八条咨询
     ...    ELSE IF    '${url_link}'=='9'    四方咨询.点击并获取第九条咨询
     ...    ELSE IF    '${url_link}'=='10'    四方咨询.点击并获取第十条咨询
+    [Return]    ${text}
+
+点击新闻快讯链接
+    [Arguments]    ${key}
+    全屏操作
+    ${text}    点击并获取新闻快讯    ${key}
     [Return]    ${text}

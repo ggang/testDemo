@@ -1,5 +1,6 @@
 *** Settings ***
 Library           Selenium2Library
+Library           ../until/constant.py
 
 *** Keywords ***
 点击并获取头条咨询
@@ -76,3 +77,16 @@ Library           Selenium2Library
     [Arguments]    ${url}
     select window    url=${url}
     page should contain image    钢钢网
+
+点击并获取新闻快讯
+    [Arguments]    ${link_key}
+    ${name}    Evaluate    'zixun'.encode("utf-8")
+    ${key}    Evaluate    '${link_key}'.encode("utf-8")
+    ${path}    set variable    ${CURDIR}${/}keyword_conf${/}url_xpath.conf
+    ${xpath}    Read config    ${path}    ${name}    ${key}
+    Execute Javascript    document.documentElement.scrollTop=9000
+    Wait Until Page Contains Element    xpath=${xpath}    10    元素未加载
+    ${onlick}    Get Element Attribute    xpath=${xpath}@onclick
+    log    ${onlick}
+    click element    xpath=${xpath}
+    [Return]    ${onlick}

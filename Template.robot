@@ -147,6 +147,7 @@ Resource          keywordManaer/钢材库.robot
     [Documentation]    ${link_num}:代表第几个Li
     ${text}    点击钢钢快报流程    ${link_num}
     检查链接是否进入了相应页面    ${text}
+    关闭当前页面
     切换窗口至首页
 
 四方咨询快报链接测试
@@ -159,5 +160,24 @@ Resource          keywordManaer/钢材库.robot
     ${text}    点击四方快报咨询流程    ${expected_urllink}
     ${url}    获取链接地址    ${text}
     检查是否正确链接到新闻页面    ${url}
+    关闭当前页面
     切换窗口至首页
     [Return]    ${text}
+
+四方咨询新闻快报链接测试
+    [Arguments]    ${url_link}
+    ${text}    点击四方新闻快报流程    ${url_link}
+    ${url}    获取链接地址    ${text}
+    log    ${url}
+    检查是否正确链接到新闻页面    ${url}
+    关闭当前页面
+    切换窗口至首页
+
+行业目录链接测试
+    [Arguments]    ${title}    ${key}
+    ${text}    点击行业目录链接流程    ${title}    ${key}
+    ${url}    获取链接地址    ${text}
+    ${final_url}    加入官网地址    ${url}
+    检查是否成功进入行业动态页面    ${final_url}
+    关闭当前页面
+    切换窗口至首页

@@ -12,6 +12,7 @@ Resource          keywordManaer/我的订单.robot
 Resource          PageObjectManager/首页/公共.robot
 Resource          PageObjectManager/首页/钢钢快报.robot
 Resource          PageObjectManager/首页/四方咨询.robot
+Resource          PageObjectManager/首页/行业目录.robot
 
 *** Keywords ***
 登录流程
@@ -158,5 +159,15 @@ Resource          PageObjectManager/首页/四方咨询.robot
 
 点击四方快报咨询流程
     [Arguments]    ${expected_staus}
-    ${text}    四方咨询.点击快报链接    ${expected_staus}
+    ${text}    四方咨询.点击动态链接    ${expected_staus}
     [Return]    ${text}
+
+点击四方新闻快报流程
+    [Arguments]    ${link_key}
+    ${text}    点击新闻快讯链接    ${link_key}
+    [Return]    ${text}
+
+点击行业目录链接流程
+    [Arguments]    ${name}    ${key}
+    ${url}    点击行业目录链接    ${name}    ${key}
+    [Return]    ${url}
