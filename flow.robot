@@ -13,6 +13,7 @@ Resource          PageObjectManager/首页/公共.robot
 Resource          PageObjectManager/首页/钢钢快报.robot
 Resource          PageObjectManager/首页/四方咨询.robot
 Resource          PageObjectManager/首页/行业目录.robot
+Resource          PageObjectManager/首页/钢材推荐.robot
 
 *** Keywords ***
 登录流程
@@ -170,3 +171,7 @@ Resource          PageObjectManager/首页/行业目录.robot
     [Arguments]    ${name}    ${key}
     ${url}    点击行业目录链接    ${name}    ${key}
     [Return]    ${url}
+
+点击钢材推荐图片流程
+    [Arguments]    ${name}    ${key}
+    点击钢材推荐图片    ${name}    ${key}
