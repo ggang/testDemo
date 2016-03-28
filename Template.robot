@@ -12,6 +12,7 @@ Resource          keywordManaer/钢材库.robot
     [Documentation]    登录模板检查登录是否成功、需要检查登录成功参数请写pass
     ...    如果需要检查登录失败请写“failed”
     [Tags]    高
+    Delete All Cookies
     登录流程    ${username}    ${password}
     登录检查    ${expected}
     退出登录判断    ${expected}
