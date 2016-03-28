@@ -89,3 +89,9 @@ test_hangye_shichang
     shichang    39
     shichang    40
     [Teardown]    关闭浏览器
+
+test_recomand_image
+    [Setup]    公共关键字.进入首页
+    [Template]    点击钢材推荐图片测试
+    imageGangCaiRecomed    image01
+    [Teardown]    关闭浏览器

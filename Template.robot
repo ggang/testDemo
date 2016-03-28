@@ -182,3 +182,7 @@ Resource          keywordManaer/钢材库.robot
     检查是否成功进入行业动态页面    ${final_url}
     关闭当前页面
     切换窗口至首页
+
+点击钢材推荐图片测试
+    [Arguments]    ${name}    ${key}
+    点击钢材推荐图片流程    ${name}    ${key}
