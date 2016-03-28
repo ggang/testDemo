@@ -12,6 +12,7 @@ Library           Selenium2Library
 
 输入用户名
     [Arguments]    ${username}
+    Maximize Browser Window
     input text    id=txtUsrName    ${username}
 
 输入密码

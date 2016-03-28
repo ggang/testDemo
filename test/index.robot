@@ -21,7 +21,7 @@ test_ggkb
     [Teardown]    关闭浏览器
 
 test_zixun_dongtai
-    [Documentation]    测试所有咨询动态链接
+    [Documentation]    测试所有咨询行业动态及下游动态链接
     [Setup]    公共关键字.进入首页
     [Template]    四方咨询快报链接测试
     1
@@ -37,6 +37,7 @@ test_zixun_dongtai
     [Teardown]    关闭浏览器
 
 test_zixun_news
+    [Documentation]    四方咨询-新闻动态链接测试
     [Setup]    公共关键字.进入首页
     [Template]    四方咨询新闻快报链接测试
     1
@@ -54,6 +55,7 @@ test_zixun_news
     [Teardown]    关闭浏览器
 
 test_hangye_gangchang
+    [Documentation]    行业目录-钢厂链接测试
     [Setup]    公共关键字.进入首页
     [Template]    行业目录链接测试
     gangchang    16
@@ -71,6 +73,7 @@ test_hangye_gangchang
     [Teardown]    关闭浏览器
 
 test_hangye_shichang
+    [Documentation]    市场链接测试
     [Setup]    公共关键字.进入首页
     [Template]    行业目录链接测试
     shichang    29

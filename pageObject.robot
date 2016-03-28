@@ -8,6 +8,8 @@ Resource          keywordManaer/会员登录.robot
 登录页面
     [Arguments]    ${user_name}    ${password}
     [Documentation]    登录页面
+    点击进入登录页面
+    SLEEP    3
     输入用户名    ${user_name}
     输入密码    ${password}
     点击登录

@@ -18,7 +18,6 @@ Resource          PageObjectManager/首页/行业目录.robot
 登录流程
     [Arguments]    ${user_name}    ${password}
     [Documentation]    登录场景的封装
-    点击进入登录页面
     登录页面    ${user_name}    ${password}
 
 进入个人中心流程
