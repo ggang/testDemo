@@ -127,7 +127,7 @@ test_recommand_title
 test_friendly_link
     [Setup]    公共关键字.进入首页
     [Template]    点击友情链接测试
-    BottomfriendlyLink     link1
+    BottomfriendlyLink    link1
     BottomfriendlyLink    link2
     BottomfriendlyLink    link3
     BottomfriendlyLink    link4
@@ -140,6 +140,7 @@ test_friendly_link
     [Teardown]    关闭浏览器
 
 test_sele
-    ${url}     Set Variable    https://www.tenpay.com/v2/
+    ${url}    Set Variable    https://www.tenpay.com/v2/a
+    log    ${url}
     run keyword if    '${url}'=='https://www.tenpay.com/v2/'    log    ${url}
-    ...    ELSE IF    log    heheh
+    ...    ELSE    log    zzzzzz
