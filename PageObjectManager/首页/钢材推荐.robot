@@ -13,3 +13,11 @@ Resource          ../../keywordManaer/钢材推荐.robot
     Select Window    title=钢钢网-钢材库,以最快最便捷的方式找到你所需要的货物
     ${title}    get title
     should be equal    ${title}    钢钢网-钢材库,以最快最便捷的方式找到你所需要的货物
+
+点击表格链接
+    @{var}    获取表格具体位置
+    [Return]    @{var}
+
+点击钢材推荐标题
+    [Arguments]    ${name}    ${key}
+    点击钢材标题    ${name}    ${key}
