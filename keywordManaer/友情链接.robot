@@ -21,5 +21,10 @@ Library           ../until/constant.py
 
 切换到友情链接页面
     [Arguments]    ${url}
-    run keyword if    '${url}'=='https://www.tenpay.com/v2/'    select window    url=https://www.tenpay.com/v3/
-    ...    ELSE IF    select window    url=${url}
+    ${link_url}    set variable    https://www.tenpay.com/v3/
+    run keyword if    '${url}'=='https://www.tenpay.com/v2/'    切换窗口至某页面    ${link_url}
+    ...    ELSE    切换窗口至某页面    ${url}
+
+切换窗口至某页面
+    [Arguments]    ${url}
+    select window    url=${url}
