@@ -14,6 +14,7 @@ Resource          PageObjectManager/首页/钢钢快报.robot
 Resource          PageObjectManager/首页/四方咨询.robot
 Resource          PageObjectManager/首页/行业目录.robot
 Resource          PageObjectManager/首页/钢材推荐.robot
+Resource          PageObjectManager/首页/友情链接.robot
 
 *** Keywords ***
 登录流程
@@ -175,3 +176,17 @@ Resource          PageObjectManager/首页/钢材推荐.robot
 点击钢材推荐图片流程
     [Arguments]    ${name}    ${key}
     点击钢材推荐图片    ${name}    ${key}
+
+点击钢材推荐表格流程
+    全屏操作
+    @{list}    点击表格链接
+    [Return]    @{list}
+
+点击钢材推荐标题流程
+    [Arguments]    ${name}    ${key}
+    点击钢材标题    ${name}    ${key}
+
+点击友情链接测试流程
+    [Arguments]    ${name}    ${key}
+    ${xpath}    点击友情链接    ${name}    ${key}
+    [Return]    ${xpath}

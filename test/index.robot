@@ -1,5 +1,8 @@
 *** Settings ***
 Resource          ../Template.robot
+Library           String
+Library           Collections
+Library           ../until/constant.py
 
 *** Test Cases ***
 test_search
@@ -94,4 +97,49 @@ test_recomand_image
     [Setup]    公共关键字.进入首页
     [Template]    点击钢材推荐图片测试
     imageGangCaiRecomed    image01
+    imageGangCaiRecomed    image02
+    imageGangCaiRecomed    image03
+    imageGangCaiRecomed    image04
+    imageGangCaiRecomed    image05
+    imageGangCaiRecomed    image06
+    imageGangCaiRecomed    image07
+    imageGangCaiRecomed    image08
+    imageGangCaiRecomed    image09
+    imageGangCaiRecomed    image10
     [Teardown]    关闭浏览器
+
+test_recomand_table
+    [Setup]    公共关键字.进入首页
+    点击钢材推荐表格测试
+    [Teardown]    关闭浏览器
+
+test_recommand_title
+    [Setup]    公共关键字.进入首页
+    [Template]    点击钢材推荐标题测试
+    cangcaiTitile    title01
+    cangcaiTitile    title02
+    cangcaiTitile    title03
+    cangcaiTitile    title04
+    cangcaiTitile    title05
+    cangcaiTitile    title06
+    [Teardown]    关闭浏览器
+
+test_friendly_link
+    [Setup]    公共关键字.进入首页
+    [Template]    点击友情链接测试
+    BottomfriendlyLink     link1
+    BottomfriendlyLink    link2
+    BottomfriendlyLink    link3
+    BottomfriendlyLink    link4
+    BottomfriendlyLink    link5
+    BottomfriendlyLink    link6
+    BottomfriendlyLink    link7
+    BottomfriendlyLink    link8
+    BottomfriendlyLink    link9
+    BottomfriendlyLink    link10
+    [Teardown]    关闭浏览器
+
+test_sele
+    ${url}     Set Variable    https://www.tenpay.com/v2/
+    run keyword if    '${url}'=='https://www.tenpay.com/v2/'    log    ${url}
+    ...    ELSE IF    log    heheh

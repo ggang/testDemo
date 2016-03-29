@@ -21,3 +21,15 @@ def ReadConfig(path,name,key):
     config.read(path)
     url_path =config.get(name,key)
     return url_path
+
+def TableXpath():
+    """
+    get table xpath
+    """
+    xpath=[]
+    for row in range(1,7):
+        for cloum in range(1,7):
+            msg='/html/body/div[7]/div[2]/table/tbody/tr['+str(row)+']/td['+str(cloum)+']'
+            xpath.append(msg)
+    print xpath
+    return xpath
