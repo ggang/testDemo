@@ -88,3 +88,19 @@ Library           ../until/constant.py
 
 关闭当前页面
     close window
+
+点击底部链接
+    [Arguments]    ${name}    ${key}
+    ${name}    Evaluate    '${name}'.encode("utf-8")
+    ${key}    Evaluate    '${key}'.encode("utf-8")
+    ${path}    set variable    ${CURDIR}${/}keyword_conf${/}url_xpath.conf
+    ${src}    Read config    ${path}    ${name}    ${key}
+    Execute Javascript    document.documentElement.scrollTop=1000
+    click element    xpath=${src}
+    [Return]    ${src}
+
+根据路径获取链接地址
+    [Arguments]    ${xpath}
+    Wait Until Page Contains Element    xpath=${xpath}    10    元素未加载
+    ${href}    Get Element Attribute    xpath=${xpath}@href
+    [Return]    ${href}

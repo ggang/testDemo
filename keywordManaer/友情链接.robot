@@ -27,4 +27,4 @@ Library           ../until/constant.py
 
 切换窗口至某页面
     [Arguments]    ${url}
-    select window    url=${url}
+    wait until keyword succeeds    1min    5sec    select window    url=${url}

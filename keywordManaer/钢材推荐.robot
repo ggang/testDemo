@@ -29,3 +29,4 @@ Library           ../until/constant.py
     ${src}    Read config    ${path}    ${name}    ${key}
     Execute Javascript    document.documentElement.scrollTop=1000
     click element    xpath=${src}
+    [Return]    ${src}
