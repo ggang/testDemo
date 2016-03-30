@@ -165,3 +165,14 @@ test_bottom_opreation_guide
     BottomAboutUs    about04
     BottomAboutUs    about05
     [Teardown]    关闭浏览器
+
+test_bottom_certficate _image
+    [Documentation]    底部证书
+    [Setup]    公共关键字.进入首页
+    [Template]    底部证书链接测试
+    BottomImage    imglink01
+    BottomImage    imglink02
+    BottomImage    imglink03
+    BottomImage    imglink04
+    BottomImage    imglink05
+    [Teardown]    关闭浏览器

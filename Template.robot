@@ -219,3 +219,11 @@ Resource          keywordManaer/钢材库.robot
     检查是否成功进入链接页面    ${href}
     关闭当前页面
     切换窗口至首页
+
+底部证书链接测试
+    [Arguments]    ${name}    ${key}
+    ${src}    点击底部证书流程    ${name}    ${key}
+    检查是否进入证书页面    ${src}
+    关闭当前页面
+    切换窗口至首页
+    [Return]    ${src}
