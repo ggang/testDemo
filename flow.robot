@@ -196,3 +196,8 @@ Resource          PageObjectManager/首页/首页底部.robot
     [Arguments]    ${name}    ${key}
     ${xpath}    点击操作指南链接    ${name}    ${key}
     [Return]    ${xpath}
+
+点击底部证书流程
+    [Arguments]    ${name}    ${key}
+    ${src}    点击证书图片    ${name}    ${key}
+    [Return]    ${src}
