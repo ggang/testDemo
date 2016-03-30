@@ -211,3 +211,11 @@ Resource          keywordManaer/钢材库.robot
     检查是否进入友情链接页面    ${href}
     关闭当前页面
     切换窗口至首页
+
+底部操作链接测试
+    [Arguments]    ${name}    ${key}
+    ${xpath}    点击底部操作指南流程    ${name}    ${key}
+    ${href}    根据路径获取链接地址    ${xpath}
+    检查是否成功进入链接页面    ${href}
+    关闭当前页面
+    切换窗口至首页

@@ -15,6 +15,7 @@ Resource          PageObjectManager/首页/四方咨询.robot
 Resource          PageObjectManager/首页/行业目录.robot
 Resource          PageObjectManager/首页/钢材推荐.robot
 Resource          PageObjectManager/首页/友情链接.robot
+Resource          PageObjectManager/首页/首页底部.robot
 
 *** Keywords ***
 登录流程
@@ -189,4 +190,9 @@ Resource          PageObjectManager/首页/友情链接.robot
 点击友情链接测试流程
     [Arguments]    ${name}    ${key}
     ${xpath}    点击友情链接    ${name}    ${key}
+    [Return]    ${xpath}
+
+点击底部操作指南流程
+    [Arguments]    ${name}    ${key}
+    ${xpath}    点击操作指南链接    ${name}    ${key}
     [Return]    ${xpath}

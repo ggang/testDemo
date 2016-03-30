@@ -125,6 +125,7 @@ test_recommand_title
     [Teardown]    关闭浏览器
 
 test_friendly_link
+    [Documentation]    首页友情链接测试
     [Setup]    公共关键字.进入首页
     [Template]    点击友情链接测试
     BottomfriendlyLink    link1
@@ -139,8 +140,28 @@ test_friendly_link
     BottomfriendlyLink    link10
     [Teardown]    关闭浏览器
 
-test_sele
-    ${url}    Set Variable    https://www.tenpay.com/v2/a
-    log    ${url}
-    run keyword if    '${url}'=='https://www.tenpay.com/v2/'    log    ${url}
-    ...    ELSE    log    zzzzzz
+test_bottom_opreation_guide
+    [Documentation]    底部操作指南、常见问题、权益保障、关于链接测试
+    [Setup]    公共关键字.进入首页
+    [Template]    底部操作链接测试
+    BottomOperationGuide    guide01
+    BottomOperationGuide    guide02
+    BottomOperationGuide    guide03
+    BottomOperationGuide    guide04
+    BottomOperationGuide    guide05
+    BottomComonProblem    problem01
+    BottomComonProblem    problem02
+    BottomComonProblem    problem03
+    BttomrightProtection    protect01
+    BttomrightProtection    protect02
+    BttomrightProtection    protect03
+    BttomrightProtection    protect04
+    BttomrightProtection    protect05
+    BottomAboutUs    about01
+    BottomAboutUs    about02
+    BottomAboutUs    about01
+    BottomAboutUs    about02
+    BottomAboutUs    about03
+    BottomAboutUs    about04
+    BottomAboutUs    about05
+    [Teardown]    关闭浏览器
