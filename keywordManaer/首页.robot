@@ -34,7 +34,11 @@ Library           Selenium2Library
 
 点击发货源按钮
 
-点击更多（四方资讯）
+获取并点击快报更多记录
+    Wait Until Page Contains Element    xpath=/html/body/div[5]/div/div[2]/div[2]/div/a    20    链接未加载出来
+    ${href}    get element attribute    xpath=/html/body/div[5]/div/div[2]/div[2]/div/a@href
+    click element    xpath=/html/body/div[5]/div/div[2]/div[2]/div/a
+    [Return]    ${href}
 
 获取并点击快报第二条记录
     Wait Until Page Contains Element    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[2]/a    20    链接未加载出来
@@ -65,6 +69,7 @@ Library           Selenium2Library
     wait until page contains    ${value}    20    页面加载失败
 
 检查链接是否进入了相应页面
-    [Arguments]    ${text}
-    select window    url=${text}
-    page should contain image    钢钢网
+    [Arguments]    ${href}
+    select window    url=${href}
+    run keyword if    '${href}'=='http://www.ggang.cn/newskuaibao/Index/64'    page should contain    钢钢快报
+    ...    ELSE    page should contain image    钢钢网

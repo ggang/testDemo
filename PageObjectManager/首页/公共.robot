@@ -8,3 +8,47 @@ Resource          ../../keywordManaer/会员登录.robot
     全屏操作
     输入搜索条件    ${search_msg}
     点击搜索按钮
+
+菜单切换
+    [Arguments]    ${name}    ${key}
+    ${xpath}    读取配置文件    ${name}    ${key}
+    ${href}    根据路径获取链接地址    ${xpath}
+    根据路径点击元素    ${xpath}
+    [Return]    ${href}
+
+检查是否成功切换到菜单页面
+    [Arguments]    ${href}
+    run keyword if    '${href}'=='http://res.ggang.cn/'    检查是否成功进入钢材库页面
+    ...    ELSE IF    '${href}'=='http://res.ggang.cn/SteelList/Spotgoods'    检查是否进入四方现货页面
+    ...    ELSE IF    '${href}'=='http://news.ggang.cn/'    检查是否进入四方咨讯页面
+    ...    ELSE IF    '${href}'=='http://bill.ggang.cn/'    检查是否进入大象钢票页面    ${href}
+    ...    ELSE IF    '${href}'=='http://www.ggang.cn/Copyright/Logistics'    检查是否进入小象快运页面    ${href}
+    ...    ELSE IF    '${href}'=='http://www.ggang.cn/Bidding'    检查是否进入招标中心页面
+
+热门搜索
+    [Arguments]    ${name}    ${key}
+    ${xpath}    读取配置文件    ${name}    ${key}
+    根据路径点击元素    ${xpath}
+
+我要买货
+    [Arguments]    ${name}    ${key}
+    ${xpath}    读取配置文件    ${name}    ${key}
+    ${href}    根据路径获取链接地址    ${xpath}
+    点击我要买货    ${xpath}
+    [Return]    ${href}
+
+检查是否成功调入要买页面
+    [Arguments]    ${href}
+    ${status}    判断状态是否为登录状态
+    run keyword if    '${status}'=='False'    检查是否进入登录页面    ${href}
+    ...    ELSE IF    '${status}'=='True'    检查是否进入创建订单页面    ${href}
+
+去找货
+    [Arguments]    ${name}    ${key}
+    ${xpath}    读取配置文件    ${name}    ${key}
+    根据路径点击元素    ${xpath}
+
+申请商票贷
+    [Arguments]    ${name}    ${key}
+    ${xpath}    读取配置文件    ${name}    ${key}
+    根据路径点击元素    ${xpath}

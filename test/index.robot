@@ -13,9 +13,10 @@ test_search
     [Teardown]    关闭浏览器
 
 test_ggkb
-    [Documentation]    钢钢快报链接测试
+    [Documentation]    钢钢快报链接及点击更多测试
     [Setup]    公共关键字.进入首页
     [Template]    钢钢快报链接测试
+    0
     1
     2
     3
@@ -116,12 +117,12 @@ test_recomand_table
 test_recommand_title
     [Setup]    公共关键字.进入首页
     [Template]    点击钢材推荐标题测试
-    cangcaiTitile    title01
-    cangcaiTitile    title02
-    cangcaiTitile    title03
-    cangcaiTitile    title04
-    cangcaiTitile    title05
-    cangcaiTitile    title06
+    gangcaiTitile    title01
+    gangcaiTitile    title02
+    gangcaiTitile    title03
+    gangcaiTitile    title04
+    gangcaiTitile    title05
+    gangcaiTitile    title06
     [Teardown]    关闭浏览器
 
 test_friendly_link
@@ -167,7 +168,7 @@ test_bottom_opreation_guide
     [Teardown]    关闭浏览器
 
 test_bottom_certficate _image
-    [Documentation]    底部证书
+    [Documentation]    底部证书测试
     [Setup]    公共关键字.进入首页
     [Template]    底部证书链接测试
     BottomImage    imglink01
@@ -175,4 +176,50 @@ test_bottom_certficate _image
     BottomImage    imglink03
     BottomImage    imglink04
     BottomImage    imglink05
+    [Teardown]    关闭浏览器
+
+test_menu_switch
+    [Documentation]    首页菜单切换测试
+    [Setup]    公共关键字.进入首页
+    [Template]    菜单切换测试
+    Menu    menulink02
+    Menu    menulink03
+    Menu    menulink04
+    Menu    menulink05
+    Menu    menulink06
+    Menu    menulink07
+    [Teardown]    关闭浏览器
+
+test_hot_search
+    [Documentation]    热门搜索测试
+    [Setup]    公共关键字.进入首页
+    [Template]    热门搜索测试
+    HotSearch     hot1
+    HotSearch    hot2
+    HotSearch    hot3
+    HotSearch    hot4
+    HotSearch    hot5
+    HotSearch    hot6
+    [Teardown]    关闭浏览器
+
+test_wantBy
+    [Documentation]    我要买测试（未登录，登录）,
+    ...    1.登录状态点击我要买进入创建订单页面，
+    ...    2.未登录状态点击我要买进入登录页面
+    [Setup]    公共关键字.进入首页
+    [Template]    我要买货测试
+    indexActivex     wantBy     logined
+    indexActivex    wantBy    unlogin
+    [Teardown]    关闭浏览器
+
+test_spot_good
+    [Documentation]    去找货测试
+    [Setup]    公共关键字.进入首页
+    找货测试    indexActivex     spotgoods
+    [Teardown]    关闭浏览器
+
+test_apply_spd
+    [Documentation]    申请商票贷
+    [Setup]    公共关键字.进入首页
+    申请商票贷测试    indexActivex     applyGp
     [Teardown]    关闭浏览器
