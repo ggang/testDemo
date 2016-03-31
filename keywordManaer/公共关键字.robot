@@ -31,7 +31,9 @@ Library           ../until/constant.py
     click button    xpath=/html/body/div[2]/div/div[1]/div[1]/input[2]
 
 点击我要买货
-    click link    http://user.ggang.cn/AddPurchaseOrder/Index
+    [Arguments]    ${xpath}
+    Wait Until Page Contains Element    xpath=${xpath}    20    我要买按钮未加载出来
+    click element    xpath=${xpath}
 
 点击三级螺纹钢
     click link    三级螺纹钢
@@ -101,6 +103,61 @@ Library           ../until/constant.py
 
 根据路径获取链接地址
     [Arguments]    ${xpath}
-    Wait Until Page Contains Element    xpath=${xpath}    10    元素未加载
+    Wait Until Page Contains Element    xpath=${xpath}    20    元素未加载
+    sleep    5
     ${href}    Get Element Attribute    xpath=${xpath}@href
     [Return]    ${href}
+
+读取配置文件
+    [Arguments]    ${name}    ${key}
+    [Documentation]    读取配置文件，输入name, key, \ \ return \ 队应KEY的值
+    ${name}    Evaluate    '${name}'.encode("utf-8")
+    ${key}    Evaluate    '${key}'.encode("utf-8")
+    ${path}    set variable    ${CURDIR}${/}keyword_conf${/}url_xpath.conf
+    ${src}    Read config    ${path}    ${name}    ${key}
+    [Return]    ${src}
+
+根据路径点击元素
+    [Arguments]    ${xpath}
+    click element    xpath=${xpath}
+
+检查是否进入四方现货页面
+    select window    title=钢钢网-四方现货,以最快最便捷的方式找到你所需要的货物
+    ${title}    get title
+    should start with    ${title}    钢钢网-四方现货
+
+检查是否进入四方咨讯页面
+    select window    title=新闻专栏-钢铁资讯-四方资讯
+    ${title}    get title
+    should be equal    ${title}    新闻专栏-钢铁资讯-四方资讯
+
+检查是否进入大象钢票页面
+    wait until keyword succeeds    1min    5sec    select window    title=钢钢网-大象钢票,解决流动资金不足,利率低,操作简便,安全性高
+    ${title}    get title
+    should start with    ${title}    钢钢网-大象钢票
+
+检查是否进入小象快运页面
+    [Arguments]    ${url}
+    select window    url=${url}
+    ${title}    get title
+    should start with    ${title}    小象快运
+
+检查是否进入招标中心页面
+    select window    title=钢钢网-招标中心,提供国企央企招标各地的钢铁相关项目招标信息
+    ${title}    get title
+    should be equal    ${title}    钢钢网-招标中心,提供国企央企招标各地的钢铁相关项目招标信息
+
+判断状态是否为登录状态
+    ${status}    run keyword and return status    Get Cookie value    token
+    [Return]    ${status}
+
+检查是否进入登录页面
+    [Arguments]    ${href}
+    select window    url=${href}
+    wait until page contains    会员登录    20    加载超时
+
+检查是否进入创建订单页面
+    [Arguments]    ${href}
+    sleep    3
+    select window    url=${href}
+    wait until page contains element    id=NameLxc    30    元素未成功加载

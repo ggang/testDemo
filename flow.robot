@@ -201,3 +201,38 @@ Resource          PageObjectManager/首页/首页底部.robot
     [Arguments]    ${name}    ${key}
     ${src}    点击证书图片    ${name}    ${key}
     [Return]    ${src}
+
+菜单切换流程
+    [Arguments]    ${name}    ${key}
+    全屏操作
+    ${href}    菜单切换    ${name}    ${key}
+    [Return]    ${href}
+
+热门搜索流程
+    [Arguments]    ${name}    ${key}
+    热门搜索    ${name}    ${key}
+
+我要买货流程
+    [Arguments]    ${name}    ${key}
+    全屏操作
+    登录流程    ${login_user}    ${password}
+    登录检查    ${result}
+    ${href}    我要买货    ${name}    ${key}
+    [Return]    ${href}
+
+未登录我要买货流程
+    [Arguments]    ${name}    ${key}
+    ${href}    我要买货    ${name}    ${key}
+    [Return]    ${href}
+
+找货流程
+    [Arguments]    ${name}    ${key}
+    登录流程    ${login_user}    ${password}
+    登录检查    ${result}
+    去找货    ${name}    ${key}
+
+申请商票贷流程
+    [Arguments]    ${name}    ${key}
+    登录流程    ${login_user}    ${password}
+    登录检查    ${result}
+    申请商票贷    ${name}    ${key}

@@ -12,7 +12,6 @@ Resource          keywordManaer/钢材库.robot
     [Documentation]    登录模板检查登录是否成功、需要检查登录成功参数请写pass
     ...    如果需要检查登录失败请写“failed”
     [Tags]    高
-    Delete All Cookies
     登录流程    ${username}    ${password}
     登录检查    ${expected}
     退出登录判断    ${expected}
@@ -146,8 +145,8 @@ Resource          keywordManaer/钢材库.robot
 钢钢快报链接测试
     [Arguments]    ${link_num}
     [Documentation]    ${link_num}:代表第几个Li
-    ${text}    点击钢钢快报流程    ${link_num}
-    检查链接是否进入了相应页面    ${text}
+    ${href}    点击钢钢快报流程    ${link_num}
+    检查链接是否进入了相应页面    ${href}
     关闭当前页面
     切换窗口至首页
 
@@ -227,3 +226,39 @@ Resource          keywordManaer/钢材库.robot
     关闭当前页面
     切换窗口至首页
     [Return]    ${src}
+
+菜单切换测试
+    [Arguments]    ${name}    ${key}
+    ${href}    菜单切换流程    ${name}    ${key}
+    检查是否成功切换到菜单页面    ${href}
+    关闭当前页面
+    切换窗口至首页
+
+热门搜索测试
+    [Arguments]    ${name}    ${key}
+    全屏操作
+    热门搜索流程    ${name}    ${key}
+    检查是否成功进入钢材库页面
+    关闭当前页面
+    切换窗口至首页
+
+我要买货测试
+    [Arguments]    ${name}    ${key}    ${status}
+    [Documentation]    '${status}'=='logined' \ 为登录状态下我要买，跳转创建订单页面
+    ...    '${status}'=='unlogin' 为未登录状态，跳转到登录页面
+    ${href}=    run keyword if    '${status}'=='logined'    我要买货流程    ${name}    ${key}
+    ...    ELSE IF    '${status}'=='unlogin'    未登录我要买货流程    ${name}    ${key}
+    检查是否成功调入要买页面    ${href}
+    关闭当前页面
+    切换窗口至首页
+    run keyword if    '${status}'=='logined'    点击退出按钮
+
+找货测试
+    [Arguments]    ${name}    ${key}
+    找货流程    ${name}    ${key}
+    检查是否进入四方现货页面
+
+申请商票贷测试
+    [Arguments]    ${name}    ${key}
+    申请商票贷流程    ${name}    ${key}
+    检查是否进入大象钢票页面
