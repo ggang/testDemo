@@ -1,6 +1,8 @@
 *** Settings ***
 Resource          ../../keywordManaer/公共关键字.robot
 Resource          ../../keywordManaer/会员登录.robot
+Resource          ../../keywordManaer/首页.robot
+Library           ../../until/constant.py
 
 *** Keywords ***
 搜索
@@ -21,7 +23,7 @@ Resource          ../../keywordManaer/会员登录.robot
     run keyword if    '${href}'=='http://res.ggang.cn/'    检查是否成功进入钢材库页面
     ...    ELSE IF    '${href}'=='http://res.ggang.cn/SteelList/Spotgoods'    检查是否进入四方现货页面
     ...    ELSE IF    '${href}'=='http://news.ggang.cn/'    检查是否进入四方咨讯页面
-    ...    ELSE IF    '${href}'=='http://bill.ggang.cn/'    检查是否进入大象钢票页面    ${href}
+    ...    ELSE IF    '${href}'=='http://bill.ggang.cn/'    检查是否进入大象钢票页面
     ...    ELSE IF    '${href}'=='http://www.ggang.cn/Copyright/Logistics'    检查是否进入小象快运页面    ${href}
     ...    ELSE IF    '${href}'=='http://www.ggang.cn/Bidding'    检查是否进入招标中心页面
 
@@ -52,3 +54,33 @@ Resource          ../../keywordManaer/会员登录.robot
     [Arguments]    ${name}    ${key}
     ${xpath}    读取配置文件    ${name}    ${key}
     根据路径点击元素    ${xpath}
+
+申请大象钢票
+    点击申请大象钢票
+
+发布资源
+    点击发货源按钮
+
+立即申请
+    [Arguments]    ${name}    ${key}
+    ${xpath}    读取配置文件    ${name}    ${key}
+    ${href}    根据路径获取链接onclick属性    ${xpath}
+    ${final_href}    printList    ${href}
+    ${url}    set variable    ${final_href[1]}
+    根据路径点击元素    ${xpath}
+    [Return]    ${url}
+
+检查申请是否跳入相应页面
+    [Arguments]    ${href}
+    ${status}    判断状态是否为登录状态
+    run keyword if    '${status}'=='False'    检查是否进入登录页面    ${href}
+    ...    ELSE IF    '${status}'=='True'    检查是否进入大象钢票页面
+
+联系客服
+    点击客服按钮
+
+检查是否进入客服页面
+    [Arguments]    ${url}
+    select window    url=${url}
+    ${title}    get title
+    should start with    ${title}    钢钢网

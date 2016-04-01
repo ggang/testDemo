@@ -60,3 +60,6 @@ Library           Selenium2Library
     wait until page contains element    xpath=/html/body/div[3]/div/ul/li[2]/a    20    未成功加载添加成功页面
     ${color}    get element attribute    .gck@style
     log    ${color}
+
+切换到钢材库页面
+    select window    url=http://res.ggang.cn/

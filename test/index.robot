@@ -56,6 +56,9 @@ test_zixun_news
     10
     11
     12
+    13
+    14
+    15
     [Teardown]    关闭浏览器
 
 test_hangye_gangchang
@@ -123,6 +126,12 @@ test_recommand_title
     gangcaiTitile    title04
     gangcaiTitile    title05
     gangcaiTitile    title06
+    [Teardown]    关闭浏览器
+
+test_recomand_sifang
+    [Documentation]    去找四方库
+    [Setup]    公共关键字.进入首页
+    四方库测试
     [Teardown]    关闭浏览器
 
 test_friendly_link
@@ -194,7 +203,7 @@ test_hot_search
     [Documentation]    热门搜索测试
     [Setup]    公共关键字.进入首页
     [Template]    热门搜索测试
-    HotSearch     hot1
+    HotSearch    hot1
     HotSearch    hot2
     HotSearch    hot3
     HotSearch    hot4
@@ -208,18 +217,39 @@ test_wantBy
     ...    2.未登录状态点击我要买进入登录页面
     [Setup]    公共关键字.进入首页
     [Template]    我要买货测试
-    indexActivex     wantBy     logined
+    indexActivex    wantBy    logined
     indexActivex    wantBy    unlogin
     [Teardown]    关闭浏览器
 
 test_spot_good
     [Documentation]    去找货测试
     [Setup]    公共关键字.进入首页
-    找货测试    indexActivex     spotgoods
+    找货测试    indexActivex    spotgoods
     [Teardown]    关闭浏览器
 
 test_apply_spd
     [Documentation]    申请商票贷
     [Setup]    公共关键字.进入首页
-    申请商票贷测试    indexActivex     applyGp
+    申请商票贷测试    indexActivex    applyGp
+    [Teardown]    关闭浏览器
+
+test_fbzy
+    [Documentation]    发布资源
+    [Setup]    公共关键字.进入首页
+    发布资源测试    http://www.ggang.cn/logistics.html
+    [Teardown]    关闭浏览器
+
+test_apply_justnow
+    [Documentation]    钢票立即申请，其中包括逻辑： 未登录点击立即申请进入登录页面
+    ...    已经登录，点击立即申请进入钢票申请页面
+    [Setup]    公共关键字.进入首页
+    [Template]    立即申请钢票测试
+    indexActivex    applyliji    unlogin
+    indexActivex    applyliji    login
+    [Teardown]    关闭浏览器
+
+test_contact_service
+    [Documentation]    联系客服
+    [Setup]    公共关键字.进入首页
+    联系客服测试    http://www7.53kf.com/webCompany.php?arg=10107107&style=1
     [Teardown]    关闭浏览器

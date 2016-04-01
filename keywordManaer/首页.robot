@@ -33,6 +33,8 @@ Library           Selenium2Library
     click link    http://www.ggang.cn/logistics.html
 
 点击发货源按钮
+    wait until page contains element    xpath=//input[@class="fbzy"]    10    元素未加载
+    click element    xpath=//input[@class="fbzy"]
 
 获取并点击快报更多记录
     Wait Until Page Contains Element    xpath=/html/body/div[5]/div/div[2]/div[2]/div/a    20    链接未加载出来
@@ -73,3 +75,12 @@ Library           Selenium2Library
     select window    url=${href}
     run keyword if    '${href}'=='http://www.ggang.cn/newskuaibao/Index/64'    page should contain    钢钢快报
     ...    ELSE    page should contain image    钢钢网
+
+点击申请大象钢票
+    Maximize Browser Window
+    Wait Until Page Contains Element    css=.liji    10    元素未加载出来
+    click element    css=.liji
+
+点击客服按钮
+    Wait Until Page Contains Element    xpath=/html/body/div[4]/ul/li[2]/a/span    10    元素未加载出来
+    click element    xpath=/html/body/div[4]/ul/li[2]/a/span

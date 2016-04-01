@@ -104,7 +104,6 @@ Library           ../until/constant.py
 根据路径获取链接地址
     [Arguments]    ${xpath}
     Wait Until Page Contains Element    xpath=${xpath}    20    元素未加载
-    sleep    5
     ${href}    Get Element Attribute    xpath=${xpath}@href
     [Return]    ${href}
 
@@ -140,7 +139,7 @@ Library           ../until/constant.py
     [Arguments]    ${url}
     select window    url=${url}
     ${title}    get title
-    should start with    ${title}    小象快运
+    Page Should Contain    小象快运
 
 检查是否进入招标中心页面
     select window    title=钢钢网-招标中心,提供国企央企招标各地的钢铁相关项目招标信息
@@ -161,3 +160,24 @@ Library           ../until/constant.py
     sleep    3
     select window    url=${href}
     wait until page contains element    id=NameLxc    30    元素未成功加载
+
+根据路径获取链接onclick属性
+    [Arguments]    ${xpath}
+    Wait Until Page Contains Element    xpath=${xpath}    20    元素未加载
+    ${href}    Get Element Attribute    xpath=${xpath}@onclick
+    [Return]    ${href}
+
+根据路径获取链接title属性
+    [Arguments]    ${xpath}
+    Wait Until Page Contains Element    xpath=${xpath}    20    元素未加载
+    ${title}    Get Element Attribute    xpath=${xpath}@title
+    [Return]    ${title}
+
+检查是否进入新闻链接详情页面
+    [Arguments]    ${url}    ${title}
+    [Documentation]    检查新闻内容是否包含链接的标题，如果包含就代表已经成功加载
+    select window    url=${url}
+    wait until page contains    ${title}
+
+拖动窗口至底部
+    Execute Javascript    document.documentElement.scrollTop=9000

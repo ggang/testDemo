@@ -30,3 +30,8 @@ Library           ../until/constant.py
     Execute Javascript    document.documentElement.scrollTop=1000
     click element    xpath=${src}
     [Return]    ${src}
+
+点击进入四方现货
+    Maximize Browser Window
+    Wait Until Page Contains Element    xpath=/html/body/div[7]/div[2]/div[2]/input    10    元素未加载出来
+    click element    xpath=/html/body/div[7]/div[2]/div[2]/input
