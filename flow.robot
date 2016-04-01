@@ -236,3 +236,29 @@ Resource          PageObjectManager/首页/首页底部.robot
     登录流程    ${login_user}    ${password}
     登录检查    ${result}
     申请商票贷    ${name}    ${key}
+
+点击进入四方库流程
+    点击进入四方现货
+
+立即申请钢票流程
+    [Arguments]    ${name}    ${key}
+    全屏操作
+    登录流程    ${login_user}    ${password}
+    登录检查    ${result}
+    ${href}    立即申请    ${name}    ${key}
+    [Return]    ${href}
+
+未登录立即申请钢票流程
+    [Arguments]    ${name}    ${key}
+    全屏操作
+    ${href}    立即申请    ${name}    ${key}
+    ${url}    set variable    http://sso.ggang.cn/SSoOperater/SSoLoginIndex?url=http://bill.ggang.cn/BusinessBill/AddBillInfo
+    [Return]    ${url}
+
+发布资源流程
+    全屏操作
+    发布资源
+
+联系客服流程
+    全屏操作
+    联系客服

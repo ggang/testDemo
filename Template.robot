@@ -262,3 +262,28 @@ Resource          keywordManaer/钢材库.robot
     [Arguments]    ${name}    ${key}
     申请商票贷流程    ${name}    ${key}
     检查是否进入大象钢票页面
+
+四方库测试
+    点击进入四方库流程
+    检查是否进入四方现货页面
+
+发布资源测试
+    [Arguments]    ${url}
+    发布资源流程
+    检查是否进入小象快运页面    ${url}
+
+立即申请钢票测试
+    [Arguments]    ${name}    ${key}    ${status}
+    [Documentation]    '${status}'=='login' \ 登录后申请，进入申请钢票页面
+    ...
+    ...    '${status}'=='unlogin' 未登录申请，进入登录页面
+    ${href}    run keyword if    '${status}'=='login'    立即申请钢票流程    ${name}    ${key}
+    ...    ELSE IF    '${status}'=='unlogin'    未登录立即申请钢票流程    ${name}    ${key}
+    检查申请是否跳入相应页面    ${href}
+    关闭当前页面
+    切换窗口至首页
+
+联系客服测试
+    [Arguments]    ${url}
+    联系客服流程
+    检查是否进入客服页面    ${url}

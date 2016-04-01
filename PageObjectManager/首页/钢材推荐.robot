@@ -21,3 +21,6 @@ Resource          ../../keywordManaer/钢材推荐.robot
 点击钢材推荐标题
     [Arguments]    ${name}    ${key}
     点击钢材标题    ${name}    ${key}
+
+点击进入四方库
+    点击进入四方库
