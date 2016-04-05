@@ -45,7 +45,7 @@ Library           ../until/constant.py
     click link    钢材库
 
 点击四方现货菜单
-    click link    四方资讯
+    click link    四方现货
 
 点击大象钢票菜单
     click link    大象钢票
@@ -181,3 +181,12 @@ Library           ../until/constant.py
 
 拖动窗口至底部
     Execute Javascript    document.documentElement.scrollTop=9000
+
+点击四方资讯菜单
+    click link    四方资讯
+
+加入新闻地址
+    [Arguments]    ${href}
+    [Documentation]    加入新闻地址
+    ${url}    set variable    ${new_url}${href}
+    [Return]    ${url}
