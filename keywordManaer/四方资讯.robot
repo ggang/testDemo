@@ -16,3 +16,6 @@ Library           Selenium2Library
 
 鼠标悬浮焦点新闻
     mouse over    xpath=/html/body/div[6]/ul/li[5]
+
+点击新闻图片
+    click element    xpath=//*[@id="banner1"]/li[1]/a/img

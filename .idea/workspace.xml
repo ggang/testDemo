@@ -3,13 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6777cd10-5963-438c-afc8-a3da160ee185" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FlowManager/钢材库.robot" afterPath="$PROJECT_DIR$/FlowManager/钢材库.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TemplateManager/钢材库.robot" afterPath="$PROJECT_DIR$/TemplateManager/钢材库.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/test_conf.py" afterPath="$PROJECT_DIR$/conf/test_conf.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TemplateManager/四方资讯.robot" afterPath="$PROJECT_DIR$/TemplateManager/四方资讯.robot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/keyword_conf/url_xpath.conf" afterPath="$PROJECT_DIR$/keywordManaer/keyword_conf/url_xpath.conf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/公共关键字.robot" afterPath="$PROJECT_DIR$/keywordManaer/公共关键字.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/钢材库.robot" afterPath="$PROJECT_DIR$/keywordManaer/钢材库.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/materialsStoreroom.robot" afterPath="$PROJECT_DIR$/test/materialsStoreroom.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/四方资讯.robot" afterPath="$PROJECT_DIR$/keywordManaer/四方资讯.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/index.robot" afterPath="$PROJECT_DIR$/test/index.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/login.robot" afterPath="$PROJECT_DIR$/test/login.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/squareNew.robot" afterPath="$PROJECT_DIR$/test/squareNew.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/squareSpotGood.robot" afterPath="$PROJECT_DIR$/test/squareSpotGood.robot" />
     </list>
     <ignored path="testDemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="url_xpath.conf" pinned="false" current-in-tab="false">
+      <file leaf-file-name="url_xpath.conf" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/keywordManaer/keyword_conf/url_xpath.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="227" column="14" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="14" />
+            <state relative-caret-position="140">
+              <caret line="172" column="7" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -45,6 +46,46 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="6" column="7" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/login.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="materialsStoreroom.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/materialsStoreroom.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="squareNew.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/squareNew.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="848">
+              <caret line="107" column="12" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecommendInformation.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/RecommendInformation.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -70,46 +111,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="squareSpotGood.robot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/squareSpotGood.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.robot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/index.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="154" column="25" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="materialsStoreroom.robot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/materialsStoreroom.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="squareNew.robot" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/squareNew.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="100" column="3" selection-start-line="100" selection-start-column="3" selection-end-line="100" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -129,8 +130,9 @@
         <option value="$PROJECT_DIR$/PageObjectManager/首页/钢钢快报.robot" />
         <option value="$PROJECT_DIR$/conf/test_conf.py" />
         <option value="$PROJECT_DIR$/test/squareSpotGood.robot" />
-        <option value="$PROJECT_DIR$/keywordManaer/keyword_conf/url_xpath.conf" />
         <option value="$PROJECT_DIR$/test/squareNew.robot" />
+        <option value="$PROJECT_DIR$/test/RecommendInformation.robot" />
+        <option value="$PROJECT_DIR$/keywordManaer/keyword_conf/url_xpath.conf" />
       </list>
     </option>
   </component>
@@ -140,10 +142,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-37" />
-    <option name="y" value="97" />
-    <option name="width" value="1928" />
-    <option name="height" value="1060" />
+    <option name="x" value="267" />
+    <option name="y" value="30" />
+    <option name="width" value="1465" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -201,6 +203,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PageObjectManager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -426,16 +442,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-37" y="97" width="1928" height="1060" extended-state="1" />
+    <frame x="267" y="30" width="1465" height="904" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22237474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16955446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -471,7 +487,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/log.html" />
     <entry file="file://$PROJECT_DIR$/keywordManaer/我的订单.robot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-67">
@@ -581,13 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/login.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -763,23 +771,15 @@
     <entry file="file://$PROJECT_DIR$/test/index.robot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="154" column="25" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
+          <caret line="155" column="25" selection-start-line="155" selection-start-column="25" selection-end-line="155" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/test_conf.py">
+    <entry file="file://$PROJECT_DIR$/test/squareSpotGood.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/until/constant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="420">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -792,34 +792,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/squareSpotGood.robot">
+    <entry file="file://$PROJECT_DIR$/until/constant.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="280">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/test_conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/login.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/materialsStoreroom.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keywordManaer/keyword_conf/url_xpath.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="227" column="14" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="14" />
+        <state relative-caret-position="440">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/squareNew.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="100" column="3" selection-start-line="100" selection-start-column="3" selection-end-line="100" selection-end-column="3" />
+        <state relative-caret-position="848">
+          <caret line="107" column="12" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/RecommendInformation.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keywordManaer/keyword_conf/url_xpath.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="172" column="7" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="7" />
           <folding />
         </state>
       </provider>

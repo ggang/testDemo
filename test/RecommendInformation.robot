@@ -1,0 +1,50 @@
+*** Settings ***
+Documentation     招标中心
+Resource          ../TemplateManager/招标中心.robot
+
+*** Test Cases ***
+test_recommenInfo
+    [Documentation]    推荐招标信息链接，以及分类信息测试
+    [Setup]    进入招标中心流程
+    [Template]    招标中心动态链接测试
+    zhaobiaoCenter    recomandInformation01
+    zhaobiaoCenter    recomandInformation02
+    zhaobiaoCenter    recomandInformation03
+    zhaobiaoCenter    recomandInformation04
+    zhaobiaoCenter    recomandInformation05
+    zhaobiaoCenter    recomandInformation06
+    zhaobiaoCenter    recomandInformation07
+    zhaobiaoCenter    recomandInformation08
+    zhaobiaoCenter    recomandInformation09
+    zhaobiaoCenter    recomandInformation10
+    zhaobiaoCenter    recomandInformation11
+    zhaobiaoCenter    recomandInformation12
+    zhaobiaoCenter    recomandInformation13
+    zhaobiaoCenter    recomandInformation14
+    zhaobiaoCenter    recomandInformation15
+    zhaobiaoCenter    recomandInformation16
+    zhaobiaoCenter    recomandInformation17
+    zhaobiaoCenter    recomandInformation18
+    zhaobiaoCenter    recomandInformation19
+    zhaobiaoCenter    recomandInformation20
+    zhaobiaoCenter    zhaobiaoinfo01
+    zhaobiaoCenter    zhaobiaoinfo02
+    zhaobiaoCenter    zhaobiaoinfo03
+    zhaobiaoCenter    zhaobiaoinfo04
+    zhaobiaoCenter    zhaobiaoinfo05
+    zhaobiaoCenter    zhaobiaoinfo06
+    zhaobiaoCenter    zhaobiaoinfo07
+    zhaobiaoCenter    zhaobiaoinfo08
+    zhaobiaoCenter    zhaobiaoinfo09
+    zhaobiaoCenter    zhaobiaoinfo10
+    zhaobiaoCenter    zhaobiaoinfo11
+    zhaobiaoCenter    zhaobiaoinfo12
+    zhaobiaoCenter    zhaobiaoinfo13
+    zhaobiaoCenter    zhaobiaoinfo14
+    zhaobiaoCenter    zhaobiaoinfo15
+    zhaobiaoCenter    zhaobiaoinfo16
+    zhaobiaoCenter    zhaobiaoinfo17
+    zhaobiaoCenter    zhaobiaoinfo18
+    zhaobiaoCenter    zhaobiaoinfo19
+    zhaobiaoCenter    zhaobiaoinfo20
+    [Teardown]    关闭浏览器

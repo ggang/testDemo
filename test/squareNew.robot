@@ -31,13 +31,6 @@ test_sqare_link
     sqareInformation    hangyedongtai14
     sqareInformation    hangyedongtai15
     sqareInformation    hangyedongtai16
-    sqareInformation    hangyedongtai17
-    [Teardown]    关闭浏览器
-
-test_dong
-    [Setup]    进入四方资讯流程
-    mouse over    xpath=/html/body/div[6]/ul/li[4]
-    Page Should Contain Image    4月1日波罗的海指数上升
     [Teardown]    关闭浏览器
 
 test_sqare_xiayoudongtai_link
@@ -110,4 +103,9 @@ test_sqare_jiaodiannew_link
     sqareInformation    jiaodiannews10
     sqareInformation    jiaodiannews11
     sqareInformation    jiaodiannews12
+    [Teardown]    关闭浏览器
+
+test_image_link
+    [Setup]    进入四方资讯流程
+    四方资讯图片测试
     [Teardown]    关闭浏览器

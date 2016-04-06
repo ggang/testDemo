@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation     四方现库
 Test Template
 Resource          ../TemplateManager/四方现货.robot
 
@@ -19,5 +20,4 @@ test_spotGood_dongtailink
     sqareSpotGoods    hongguan02
     sqareSpotGoods    hongguan03
     sqareSpotGoods    hongguan04
-
     [Teardown]    关闭浏览器

@@ -53,8 +53,8 @@ Library           ../until/constant.py
 点击小象快运菜单
     click link    小象快运
 
-招标中心菜单
-    click link    招标中心菜单
+点击招标中心菜单
+    click link    招标中心
 
 检查是否成功进入钢材库页面
     select window    title= 钢钢网-钢材库,以最快最便捷的方式找到你所需要的货物
