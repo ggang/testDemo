@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     用例层
+Documentation     登录
 Library           Selenium2Library
 Resource          ../keywordManaer/会员登录.robot
 Resource          ../flow.robot
