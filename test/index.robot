@@ -99,6 +99,7 @@ test_hangye_shichang
     [Teardown]    关闭浏览器
 
 test_recomand_image
+    [Documentation]    钢材图片推荐测试
     [Setup]    公共关键字.进入首页
     [Template]    点击钢材推荐图片测试
     imageGangCaiRecomed    image01
@@ -114,11 +115,13 @@ test_recomand_image
     [Teardown]    关闭浏览器
 
 test_recomand_table
+    [Documentation]    钢材推荐表格链接测试
     [Setup]    公共关键字.进入首页
     点击钢材推荐表格测试
     [Teardown]    关闭浏览器
 
 test_recommand_title
+    [Documentation]    钢材推荐顶部标题测试
     [Setup]    公共关键字.进入首页
     [Template]    点击钢材推荐标题测试
     gangcaiTitile    title01

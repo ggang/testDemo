@@ -30,6 +30,7 @@ Library           Selenium2Library
     page should contain    会员登录
 
 点击进入修改密码页面
+    Wait Until Page Contains Element    xpath=/html/body/div[4]/div[1]/dl/dd[8]/a
     click element    xpath=/html/body/div[4]/div[1]/dl/dd[8]/a
 
 等待账户设置列表加载
