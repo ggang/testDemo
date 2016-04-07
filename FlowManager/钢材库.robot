@@ -7,9 +7,9 @@ Resource          ../keywordManaer/钢材库.robot
 点击动态链接流程
     [Arguments]    ${xpath}
     ${title}    根据路径获取链接title属性    ${xpath}
-    ${href}    根据路径获取链接地址    ${xpath}
     等待加载详情出现
     拖动窗口至底部
+    ${href}    根据路径获取链接地址    ${xpath}
     点击动态链接    ${xpath}
     [Return]    ${title}    ${href}
 
