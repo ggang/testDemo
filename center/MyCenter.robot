@@ -48,8 +48,6 @@ test_ziyuan_Singaladd
     [Template]    单条添加测试
     中厚板    镀锌卷1    0.5*1250*c    DX51D+Z80    酒钢    3    3
     ...    上海    南京    25.6    20    添加成功    镀锌卷1
-    中厚板    镀锌卷1    0.5*1250*c    DX51D+Z80    酒钢    3    3
-    ...    上海    南京    25.6    20    添加成功    镀锌卷1
     [Teardown]    关闭浏览器
 
 test_ziyuan_modify

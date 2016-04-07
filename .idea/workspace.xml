@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6777cd10-5963-438c-afc8-a3da160ee185" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/center/MyCenter.robot" afterPath="$PROJECT_DIR$/center/MyCenter.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/修改密码.robot" afterPath="$PROJECT_DIR$/keywordManaer/修改密码.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/我的资源库.robot" afterPath="$PROJECT_DIR$/keywordManaer/我的资源库.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/index.robot" afterPath="$PROJECT_DIR$/test/index.robot" />
     </list>
     <ignored path="testDemo.iws" />
     <ignored path=".idea/workspace.xml" />
