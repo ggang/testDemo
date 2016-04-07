@@ -35,6 +35,7 @@ Library           ../../until/constant.py
 我要买货
     [Arguments]    ${name}    ${key}
     ${xpath}    读取配置文件    ${name}    ${key}
+    sleep    3
     ${href}    根据路径获取链接地址    ${xpath}
     点击我要买货    ${xpath}
     [Return]    ${href}

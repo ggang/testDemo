@@ -103,7 +103,7 @@ Library           ../until/constant.py
 
 根据路径获取链接地址
     [Arguments]    ${xpath}
-    Wait Until Page Contains Element    xpath=${xpath}    20    元素未加载
+    Wait Until Page Contains Element    xpath=${xpath}    50    元素未加载
     ${href}    Get Element Attribute    xpath=${xpath}@href
     [Return]    ${href}
 
