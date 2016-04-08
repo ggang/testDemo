@@ -130,6 +130,7 @@ Library           Selenium2Library
     [Arguments]    ${product_name}
     [Documentation]    注意每次输入产品名的唯一性
     wait until page contains element    xpath=//*[@id="retb"]/tr[1]/td[3]/input    50    未成功加载添加成功页面
+    sleep    2
     ${value}    get element attribute    //*[@id="retb"]/tr[1]/td[3]/input@value
     should be equal    ${value}    ${product_name}
 
