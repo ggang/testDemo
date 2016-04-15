@@ -75,6 +75,7 @@ Library           ../until/constant.py
 
 检查是否正确链接到新闻页面
     [Arguments]    ${url}
+    [Documentation]    根据URL进入改页面，如果页面中包含钢钢网的图片代表已经成功进入新闻页面
     select window    url=${url}
     page should contain image    钢钢网
 

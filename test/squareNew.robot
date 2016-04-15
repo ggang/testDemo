@@ -106,6 +106,7 @@ test_sqare_jiaodiannew_link
     [Teardown]    关闭浏览器
 
 test_image_link
+    [Documentation]    四方资讯图片测试
     [Setup]    进入四方资讯流程
     四方资讯图片测试
     [Teardown]    关闭浏览器

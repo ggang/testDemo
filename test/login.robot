@@ -14,8 +14,6 @@ login
     [Template]    登录测试
     [Timeout]
     13611873856    123456    pass
-    13611873856    123456    pass
-    136118738656    1234    failed
     [Teardown]    会员登录.关闭浏览器
 
 test_cookie
@@ -38,4 +36,10 @@ test_sifang
     select window    url=http://www7.53kf.com/webCompany.php?arg=10107107&style=1
     ${title}    get title
     should start with    ${title}    钢钢网
+    [Teardown]    关闭浏览器
+
+test_mouse
+    [Setup]    公共关键字.进入首页
+    mouse over    xpath=//*[@id="aa"]/ul/li[5]/div/a/span
+    click element    xpath=//*[@id="bb"]/div[5]/ul/li[8]/a[1]
     [Teardown]    关闭浏览器

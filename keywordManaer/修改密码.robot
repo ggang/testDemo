@@ -21,12 +21,14 @@ Library           Selenium2Library
     click button    xpath=//input[@value="取消"]
 
 密码为空判断
+    [Documentation]    页面弹出DIV \ \ 不能为空
     page should contain    不能为空
 
 新密码与密码不一致
     page should contain    密码不一致
 
 检查修改密码是否成功
+    [Documentation]    密码修改成功系统自动跳入登录页面，所及检查页面是否包含“会员登录”字样
     page should contain    会员登录
 
 点击进入修改密码页面

@@ -103,6 +103,7 @@ Library           ../until/constant.py
 
 根据路径获取链接地址
     [Arguments]    ${xpath}
+    [Documentation]    本关键字根据路径获取链接的href属性
     Wait Until Page Contains Element    xpath=${xpath}    50    元素未加载
     ${href}    Get Element Attribute    xpath=${xpath}@href
     [Return]    ${href}
@@ -133,6 +134,8 @@ Library           ../until/constant.py
 检查是否进入大象钢票页面
     wait until keyword succeeds    1min    5sec    select window    title=钢钢网-大象钢票,解决流动资金不足,利率低,操作简便,安全性高
     ${title}    get title
+    Comment    sleep    5
+    Comment    click element    nextBill
     should start with    ${title}    钢钢网-大象钢票
 
 检查是否进入小象快运页面
@@ -190,3 +193,9 @@ Library           ../until/constant.py
     [Documentation]    加入新闻地址
     ${url}    set variable    ${new_url}${href}
     [Return]    ${url}
+
+检查是否成功跳入申请钢票贷页面
+    wait until keyword succeeds    1min    5sec    select window    url=http://bill.ggang.cn/BusinessBill/AddBillInfo
+    ${title}    get title
+    should start with    ${title}    钢钢网-大象钢票
+    click button    id=nextBill
