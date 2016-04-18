@@ -4,7 +4,7 @@ Library           Selenium2Library
 *** Keywords ***
 输入原密码
     [Arguments]    ${oldPassword}
-    input text    name=passOld    ${oldPassword}
+    wait until keyword succeeds    1min    5sec    input text    name=passOld    ${oldPassword}
 
 输入新密码
     [Arguments]    ${newPassword}
