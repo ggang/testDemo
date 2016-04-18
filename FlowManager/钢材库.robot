@@ -6,6 +6,9 @@ Resource          ../keywordManaer/钢材库.robot
 *** Keywords ***
 点击动态链接流程
     [Arguments]    ${xpath}
+    [Documentation]    本关键字包含：
+    ...    1.根据路径获取相应链接TITLE属性
+    ...    2.根据路径获取相应链接地址
     ${title}    根据路径获取链接title属性    ${xpath}
     等待加载详情出现
     拖动窗口至底部

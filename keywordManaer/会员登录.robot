@@ -24,6 +24,8 @@ Library           Selenium2Library
     click button    id=btnLogin
 
 检查登录是否成功
+    [Documentation]    检查登录： 1.此处用的方法为：登录成功后页面显示”退出按钮“
+    ...    还有一种方法：检查COOKIE值中是否包含TOKENID，如果有代表成功登录
     wait until page contains element    id=btnLogOut    8
 
 检查登录失败
@@ -45,6 +47,7 @@ Library           Selenium2Library
     click element    xpath=/html/body/div[1]/div/div[2]/a[1]
 
 检查进入个人中心是否成功
+    [Documentation]    这里切换窗口选择TITLE，还有一种方法：可以使用href \ 这个会更稳定些
     select window    title=钢钢网-会员中心
     ${title}    get title
     should be equal    ${title}    钢钢网-会员中心

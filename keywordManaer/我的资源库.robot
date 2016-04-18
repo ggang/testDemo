@@ -128,7 +128,7 @@ Library           Selenium2Library
 
 检验单条是否成功
     [Arguments]    ${product_name}
-    [Documentation]    注意每次输入产品名的唯一性
+    [Documentation]    获取添加成功记录的产品名称，如果输入的产品名称与输入的产品名称相同，就代表已经成功插入（注意每次输入产品名的唯一性）
     wait until page contains element    xpath=//*[@id="retb"]/tr[1]/td[3]/input    50    未成功加载添加成功页面
     sleep    2
     ${value}    get element attribute    //*[@id="retb"]/tr[1]/td[3]/input@value
@@ -167,6 +167,7 @@ Library           Selenium2Library
 
 检查上传资源成功判断
     [Arguments]    ${filename}
+    [Documentation]    上传成功后页面会生成一条记录，检查内容中是否包含此内容，如果有则代表上传成功
     wait until page contains    ${filename}
 
 检查下架是否成功

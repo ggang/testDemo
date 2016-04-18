@@ -57,6 +57,7 @@ Library           Selenium2Library
     should be equal    ${text}    ${expected_text}
 
 点击确定按钮
+    [Documentation]    点击确定按钮
     click button    xpath=/html/body/div[4]/div[2]/div[2]/input
 
 获取姓名值
