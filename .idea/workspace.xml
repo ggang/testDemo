@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6777cd10-5963-438c-afc8-a3da160ee185" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FlowManager/钢材库.robot" afterPath="$PROJECT_DIR$/FlowManager/钢材库.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FlowManager/四方现货.robot" afterPath="$PROJECT_DIR$/FlowManager/四方现货.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TemplateManager/四方现货.robot" afterPath="$PROJECT_DIR$/TemplateManager/四方现货.robot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TemplateManager/钢材库.robot" afterPath="$PROJECT_DIR$/TemplateManager/钢材库.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/公共关键字.robot" afterPath="$PROJECT_DIR$/keywordManaer/公共关键字.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/我的订单.robot" afterPath="$PROJECT_DIR$/keywordManaer/我的订单.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/login.robot" afterPath="$PROJECT_DIR$/test/login.robot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/materialsStoreroom.robot" afterPath="$PROJECT_DIR$/test/materialsStoreroom.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/until/constant.py" afterPath="$PROJECT_DIR$/until/constant.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/squareSpotGood.robot" afterPath="$PROJECT_DIR$/test/squareSpotGood.robot" />
     </list>
     <ignored path="testDemo.iws" />
     <ignored path=".idea/workspace.xml" />

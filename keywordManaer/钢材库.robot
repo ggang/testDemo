@@ -62,7 +62,7 @@ Library           Selenium2Library
     log    ${color}
 
 切换到钢材库页面
-    select window    title=钢钢网-钢材库,以最快最便捷的方式找到你所需要的货物
+    wait until keyword succeeds    1min    5sec    select window    title=钢钢网-钢材库,以最快最便捷的方式找到你所需要的货物
 
 等待加载详情出现
     wait until page contains    查看详情    20    加载详情未出现
