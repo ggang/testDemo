@@ -213,5 +213,13 @@ Library           ../until/constant.py
     [Return]    ${result}
 
 获取宏观经济动态链接的个数
-    ${len}    Execute Javascript    return $('.info .hgjjxx li').length;
+    ${len}    Execute Javascript    return \ $('.info .hgjjxx li').length;
+    [Return]    ${len}
+
+获取下游经济动态链接的个数
+    ${len}    execute javascript    return $('.info .xydtxx li').length;
+    [Return]    ${len}
+
+获取行业动态链接的个数
+    ${len}    execute javascript    return $('.info .hydtxx li').length;
     [Return]    ${len}
