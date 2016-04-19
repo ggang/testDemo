@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6777cd10-5963-438c-afc8-a3da160ee185" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/修改密码.robot" afterPath="$PROJECT_DIR$/keywordManaer/修改密码.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FlowManager/钢材库.robot" afterPath="$PROJECT_DIR$/FlowManager/钢材库.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TemplateManager/钢材库.robot" afterPath="$PROJECT_DIR$/TemplateManager/钢材库.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/公共关键字.robot" afterPath="$PROJECT_DIR$/keywordManaer/公共关键字.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/我的订单.robot" afterPath="$PROJECT_DIR$/keywordManaer/我的订单.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/login.robot" afterPath="$PROJECT_DIR$/test/login.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/materialsStoreroom.robot" afterPath="$PROJECT_DIR$/test/materialsStoreroom.robot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/until/constant.py" afterPath="$PROJECT_DIR$/until/constant.py" />
     </list>
     <ignored path="testDemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +33,38 @@
       <file leaf-file-name="BuiltIn.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Python27/Lib/site-packages/robot/libraries/BuiltIn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8480">
-              <caret line="437" column="33" selection-start-line="437" selection-start-column="13" selection-end-line="437" selection-end-column="33" />
+            <state relative-caret-position="25120">
+              <caret line="1269" column="8" selection-start-line="1269" selection-start-column="8" selection-end-line="1269" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_alert.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python27/Lib/site-packages/robotframework_selenium2library-1.7.4-py2.7.egg/Selenium2Library/keywords/_alert.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2020">
+              <caret line="104" column="20" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="constant.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/until/constant.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_javascript.py" pinned="false" current-in-tab="true">
+        <entry file="file://D:/Python27/Lib/site-packages/robotframework_selenium2library-1.7.4-py2.7.egg/Selenium2Library/keywords/_javascript.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="51" column="23" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -47,17 +83,17 @@
       <file leaf-file-name="String.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Python27/Lib/site-packages/robot/libraries/String.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
+            <state relative-caret-position="9160">
               <caret line="465" column="25" selection-start-line="465" selection-start-column="22" selection-end-line="465" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_tableelement.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_tableelement.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Python27/Lib/site-packages/robotframework_selenium2library-1.7.4-py2.7.egg/Selenium2Library/keywords/_tableelement.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="1620">
               <caret line="84" column="85" selection-start-line="84" selection-start-column="72" selection-end-line="84" selection-end-column="85" />
               <folding />
             </state>
@@ -78,7 +114,6 @@
         <option value="$PROJECT_DIR$/PageObjectManager/首页/四方咨询.robot" />
         <option value="$PROJECT_DIR$/conf/url_xpath.conf" />
         <option value="D:/Python27/Lib/site-packages/robotframework_selenium2library-1.7.4-py2.7.egg/Selenium2Library/keywords/_tableelement.py" />
-        <option value="$PROJECT_DIR$/until/constant.py" />
         <option value="$PROJECT_DIR$/test/index.robot" />
         <option value="$PROJECT_DIR$/PageObjectManager/首页/钢钢快报.robot" />
         <option value="$PROJECT_DIR$/conf/test_conf.py" />
@@ -88,6 +123,7 @@
         <option value="$PROJECT_DIR$/keywordManaer/keyword_conf/url_xpath.conf" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="D:/Python27/Lib/site-packages/robot/libraries/String.py" />
+        <option value="$PROJECT_DIR$/until/constant.py" />
       </list>
     </option>
   </component>
@@ -97,10 +133,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="309" />
-    <option name="y" value="59" />
-    <option name="width" value="1465" />
-    <option name="height" value="904" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1928" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -127,7 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -142,24 +177,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="&lt; Python 2.7.5 (D:\Python27\python.exe) &gt;" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.7.5 (D:\Python27\python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="selenium-2.52.0-py2.7.egg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -254,6 +271,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -484,10 +502,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="309" y="59" width="1465" height="904" extended-state="1" />
+    <frame x="-4" y="-4" width="1928" height="1060" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22562674" sideWeight="0.4955414" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17061612" sideWeight="0.4955414" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32866243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -692,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python27/Lib/site-packages/robotframework_selenium2library-1.7.4-py2.7.egg/Selenium2Library/keywords/_javascript.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-996">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -748,13 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
           <caret line="31" column="27" selection-start-line="26" selection-start-column="4" selection-end-line="31" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python27/Lib/site-packages/robotframework_selenium2library-1.7.4-py2.7.egg/Selenium2Library/keywords/_alert.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1504">
-          <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -842,25 +846,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/until/constant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="15" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/keywordManaer/keyword_conf/url_xpath.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="604">
           <caret line="169" column="58" selection-start-line="169" selection-start-column="58" selection-end-line="169" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python27/Lib/site-packages/robot/libraries/BuiltIn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8480">
-          <caret line="437" column="33" selection-start-line="437" selection-start-column="13" selection-end-line="437" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,7 +863,7 @@
     </entry>
     <entry file="file://D:/Python27/Lib/site-packages/robot/libraries/String.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
+        <state relative-caret-position="9160">
           <caret line="465" column="25" selection-start-line="465" selection-start-column="22" selection-end-line="465" selection-end-column="29" />
           <folding />
         </state>
@@ -882,8 +871,40 @@
     </entry>
     <entry file="file://D:/Python27/Lib/site-packages/robotframework_selenium2library-1.7.4-py2.7.egg/Selenium2Library/keywords/_tableelement.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="1620">
           <caret line="84" column="85" selection-start-line="84" selection-start-column="72" selection-end-line="84" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python27/Lib/site-packages/robot/libraries/BuiltIn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25120">
+          <caret line="1269" column="8" selection-start-line="1269" selection-start-column="8" selection-end-line="1269" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python27/Lib/site-packages/robotframework_selenium2library-1.7.4-py2.7.egg/Selenium2Library/keywords/_alert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2020">
+          <caret line="104" column="20" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/until/constant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python27/Lib/site-packages/robotframework_selenium2library-1.7.4-py2.7.egg/Selenium2Library/keywords/_javascript.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="51" column="23" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="23" />
           <folding />
         </state>
       </provider>

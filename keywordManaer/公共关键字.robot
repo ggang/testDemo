@@ -62,7 +62,7 @@ Library           ../until/constant.py
     should be equal    ${title}    钢钢网-钢材库,以最快最便捷的方式找到你所需要的货物
 
 切换窗口至首页
-    select window    title=钢钢网-找货,找钱,找车一站式服务,钢铁电商第四方平台
+    wait until keyword succeeds    2min    5sec    select window    title=钢钢网-找货,找钱,找车一站式服务,钢铁电商第四方平台
 
 获取链接地址
     [Arguments]    ${str}
@@ -199,3 +199,19 @@ Library           ../until/constant.py
     ${title}    get title
     should start with    ${title}    钢钢网-大象钢票
     click button    id=nextBill
+
+判断钢材库下游动态是否有数据
+    ${result}    Run Keyword And Return Status    Wait Until Element Contains    xpath=/html/body/div[5]/div[4]/div[2]    暂无数据    1
+    [Return]    ${result}
+
+判断钢材库上游动态是否有数据
+    ${result}    Run Keyword And Return Status    Wait Until Element Contains    xpath=/html/body/div[5]/div[4]/div[1]    暂无数据    1
+    [Return]    ${result}
+
+判断钢材库宏观经济动态链接是否有数据
+    ${result}    Run Keyword And Return Status    Wait Until Element Contains    xpath=/html/body/div[5]/div[4]/div[3]    暂无数据    2
+    [Return]    ${result}
+
+获取宏观经济动态链接的个数
+    ${len}    Execute Javascript    return $('.info .hgjjxx li').length;
+    [Return]    ${len}
