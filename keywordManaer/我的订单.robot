@@ -19,7 +19,8 @@ Library           Selenium2Library
     select from list    id=jyzt    ${value}
 
 等待进入创建订单页面
-    wait until page contains element    id=NameLxdh    20    加载失败
+    [Documentation]    等待进入创建订单页面
+    wait until keyword succeeds    2min    5 sec    wait until page contains element    id=NameLxdh    20    未成功进入创建订单页面
 
 点击新增
     click button    xpath= //*[@id="Submitadd"]

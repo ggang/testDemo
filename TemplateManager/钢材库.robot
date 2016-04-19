@@ -7,7 +7,22 @@ Resource          ../keywordManaer/钢材库.robot
 动态链接测试
     [Arguments]    ${name}    ${key}
     ${xpath}    读取配置文件    ${name}    ${key}
-    ${title}    ${href}    点击动态链接流程    ${xpath}
-    检查是否进入新闻链接详情页面    ${href}    ${title}
-    关闭当前页面
-    切换到钢材库页面
+    ${result}    判断钢材库上游动态是否有数据
+    log    ${result}
+    run keyword if    '${result}'=='False'    动态链接判断    ${xpath}
+
+下游动态链接测试
+    [Arguments]    ${name}    ${key}
+    ${xpath}    读取配置文件    ${name}    ${key}
+    ${result}    判断钢材库下游动态是否有数据
+    log    ${result}
+    run keyword if    '${result}'=='False'    动态链接判断    ${xpath}
+
+宏观经济动态链接测试
+    [Arguments]    ${name}    ${key}
+    ${xpath}    读取配置文件    ${name}    ${key}
+    ${result}    判断钢材库宏观经济动态链接是否有数据
+    ${len}    获取宏观经济动态链接的个数
+    log    ${len}
+    log    ${result}
+    run keyword if    '${result}'=='False'    动态链接判断    ${xpath}

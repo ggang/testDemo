@@ -1,4 +1,4 @@
-# coding=utf-8
+#coding=utf-8
 #!/usr/bin/python
 
 import ConfigParser
@@ -33,3 +33,7 @@ def TableXpath():
             xpath.append(msg)
     print xpath
     return xpath
+
+def IncreaseByDegress(a):
+    return a+1
+
