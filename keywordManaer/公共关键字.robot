@@ -155,13 +155,12 @@ Library           ../until/constant.py
 
 检查是否进入登录页面
     [Arguments]    ${href}
-    select window    url=${href}
+    Wait Until Keyword Succeeds    1min    5sec    select window    url=${href}
     wait until page contains    会员登录    20    加载超时
 
 检查是否进入创建订单页面
     [Arguments]    ${href}
-    sleep    3
-    select window    url=${href}
+    wait until keyword succeeds    1min    5sec    select window    url=${href}
     wait until page contains element    id=NameLxc    30    元素未成功加载
 
 根据路径获取链接onclick属性
