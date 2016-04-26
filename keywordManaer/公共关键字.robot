@@ -2,6 +2,7 @@
 Library           Selenium2Library
 Variables         ../conf/test_conf.py
 Library           ../until/constant.py
+Library           DateTime
 
 *** Keywords ***
 进入首页
@@ -222,3 +223,8 @@ Library           ../until/constant.py
 获取行业动态链接的个数
     ${len}    execute javascript    return $('.info .hydtxx li').length;
     [Return]    ${len}
+
+获取当前时间
+    ${date}    get current date
+    ${datetime}    convert date    ${date}    datetime
+    [Return]    ${datetime}

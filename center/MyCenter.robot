@@ -58,6 +58,16 @@ test_ziyuan_modify
     1000    修改成功
     [Teardown]    关闭浏览器
 
+
+
+test_ziyuan_upload
+    [Documentation]    批量上传
+    [Tags]    一般
+    [Setup]    公共关键字.进入首页
+    ${dir}    set variable    ${CURDIR}${/}res${/}${upload_file}
+    批量上传测试    ${dir}    ${upload_file}
+    [Teardown]
+
 test_ziyuan_delete
     [Documentation]    单条删除
     [Tags]    高
@@ -66,13 +76,6 @@ test_ziyuan_delete
     删除成功    镀锌卷1
     [Teardown]    关闭浏览器
 
-test_ziyuan_upload
-    [Documentation]    批量上传
-    [Tags]    一般
-    [Setup]    公共关键字.进入首页
-    ${dir}    set variable    ${CURDIR}${/}res${/}${upload_file}
-    批量上传测试    ${dir}    ${upload_file}
-    [Teardown]    关闭浏览器
 
 test_ziyuan_Listing
     [Documentation]    资源挂牌测试
@@ -91,21 +94,28 @@ test_ziyuan_shelf
 test_ziyuan_create_order
     [Documentation]    创建采购订单测试
     [Setup]    公共关键字.进入首页
-    [Template]    创建采购订单测试
-    张三    13611873856    普通发票    钢钢网    上海市    上海市    徐汇区
-    ...    古美路    中厚板    0.5*1250*c    DX51D+Z80    杭钢    3.0
+    [Template]
+    ${datetime}    获取当前时间
+    run keyword if    ${datetime.hour}>9 and ${datetime.hour}<19    创建采购订单测试    张三    13611873856    普通发票    钢钢网
+    ...    上海市    上海市    徐汇区    古美路    中厚板    0.5*1250*c
+    ...    DX51D+Z80    杭钢    3.0
+    ...    ELSE    log    休市中
     [Teardown]    关闭浏览器
 
 test_ziyuan_modify_order
     [Documentation]    修改采购资源测试
     [Setup]    公共关键字.进入首页
-    [Template]    修改采购订单测试
-    宝钢有限股份有限公司
+    [Template]
+    ${datetime}    获取当前时间
+    run keyword if    ${datetime.hour}>9 and ${datetime.hour}<19    修改采购订单测试    宝钢有限股份有限公司
+    ...    ELSE    log    休市中
     [Teardown]    关闭浏览器
 
 test_ziyuan_canle_order
     [Documentation]    取消订单测试
     [Setup]    公共关键字.进入首页
-    [Template]    取消采购订单测试
-    确定取消
+    [Template]
+    ${datetime}    获取当前时间
+    run keyword if    ${datetime.hour}>9 and ${datetime.hour}<13    取消采购订单测试    确定取消
+    ...    ELSE    log    休市中
     [Teardown]    关闭浏览器

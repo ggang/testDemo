@@ -246,6 +246,8 @@ Resource          keywordManaer/钢材库.robot
     [Arguments]    ${name}    ${key}    ${status}
     [Documentation]    '${status}'=='logined' \ 为登录状态下我要买，跳转创建订单页面
     ...    '${status}'=='unlogin' 为未登录状态，跳转到登录页面
+    ${datetime}    获取当前时间
+    log    ${datetime}
     ${href}=    run keyword if    '${status}'=='logined'    我要买货流程    ${name}    ${key}
     ...    ELSE IF    '${status}'=='unlogin'    未登录我要买货流程    ${name}    ${key}
     检查是否成功调入要买页面    ${href}
