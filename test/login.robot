@@ -6,6 +6,7 @@ Resource          ../flow.robot
 Resource          ../Template.robot
 Resource          ../keywordManaer/公共关键字.robot
 Library           ../until/constant.py
+Library           DateTime
 
 *** Test Cases ***
 login
@@ -39,14 +40,14 @@ test_sifang
     should start with    ${title}    钢钢网
     [Teardown]    关闭浏览器
 
-test_mouse
-    [Setup]    公共关键字.进入首页
-    mouse over    xpath=//*[@id="aa"]/ul/li[5]/div/a/span
-    click element    xpath=//*[@id="bb"]/div[5]/ul/li[8]/a[1]
-    [Teardown]    关闭浏览器
-
 test_if
     ${a}    set variable    1
     run keyword if    ${a}<4    log    4
-    :FOR    ${j}    in range    1    11
+    : FOR    ${j}    IN RANGE    1    11
     \    run keyword if    ${j}<=5    log    hello
+
+test_time
+    ${date}    get current date
+    ${datetime}    convert date    ${date}    datetime
+    run keyword if    ${datetime.hour}>9 and ${datetime.hour}<19    log    aaaaaaaaaaaaaaaaaaa
+    log    ${datetime.hour}

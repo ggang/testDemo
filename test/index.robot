@@ -4,6 +4,7 @@ Resource          ../Template.robot
 Library           String
 Library           Collections
 Library           ../until/constant.py
+Resource          ../keywordManaer/公共关键字.robot
 
 *** Test Cases ***
 test_search
@@ -215,16 +216,6 @@ test_hot_search
     HotSearch    hot6
     [Teardown]    关闭浏览器
 
-test_wantBy
-    [Documentation]    我要买测试（未登录，登录）,
-    ...    1.登录状态点击我要买进入创建订单页面，
-    ...    2.未登录状态点击我要买进入登录页面
-    [Setup]    公共关键字.进入首页
-    [Template]    我要买货测试
-    indexActivex    wantBy    logined
-    indexActivex    wantBy    unlogin
-    [Teardown]    关闭浏览器
-
 test_spot_good
     [Documentation]    去找货测试
     [Setup]    公共关键字.进入首页
@@ -256,4 +247,20 @@ test_contact_service
     [Documentation]    联系客服
     [Setup]    公共关键字.进入首页
     联系客服测试    http://www7.53kf.com/webCompany.php?arg=10107107&style=1
+    [Teardown]    关闭浏览器
+
+test_wantBy_login
+    [Documentation]    我要买，登录后点击我要买，进入购买订单流程
+    [Setup]    公共关键字.进入首页
+    ${datetime}    获取当前时间
+    log    ${datetime.hour}
+    run keyword if    ${datetime.hour}>9 and ${datetime.hour}<19    我要买货测试    indexActivex    wantBy    logined
+    [Teardown]    关闭浏览器
+
+test_wantBy_unlogin
+    [Documentation]    我要买，未登录进入登录页面
+    [Setup]    公共关键字.进入首页
+    ${datetime}    获取当前时间
+    log    ${datetime.hour}
+    run keyword if    ${datetime.hour}>9 and ${datetime.hour}<19    我要买货测试    indexActivex    wantBy    unlogin
     [Teardown]    关闭浏览器
