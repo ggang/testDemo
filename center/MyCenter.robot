@@ -58,8 +58,6 @@ test_ziyuan_modify
     1000    修改成功
     [Teardown]    关闭浏览器
 
-
-
 test_ziyuan_upload
     [Documentation]    批量上传
     [Tags]    一般
@@ -67,15 +65,6 @@ test_ziyuan_upload
     ${dir}    set variable    ${CURDIR}${/}res${/}${upload_file}
     批量上传测试    ${dir}    ${upload_file}
     [Teardown]
-
-test_ziyuan_delete
-    [Documentation]    单条删除
-    [Tags]    高
-    [Setup]    公共关键字.进入首页
-    [Template]    删除资源信息测试
-    删除成功    镀锌卷1
-    [Teardown]    关闭浏览器
-
 
 test_ziyuan_Listing
     [Documentation]    资源挂牌测试
@@ -89,6 +78,14 @@ test_ziyuan_shelf
     [Tags]    高
     [Setup]    公共关键字.进入首页
     选中资源下架测试    挂牌
+    [Teardown]    关闭浏览器
+
+test_ziyuan_delete
+    [Documentation]    单条删除
+    [Tags]    高
+    [Setup]    公共关键字.进入首页
+    [Template]    删除资源信息测试
+    删除成功    镀锌卷1
     [Teardown]    关闭浏览器
 
 test_ziyuan_create_order

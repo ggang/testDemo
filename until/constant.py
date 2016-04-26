@@ -36,4 +36,3 @@ def TableXpath():
 
 def IncreaseByDegress(a):
     return a+1
-

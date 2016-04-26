@@ -58,9 +58,11 @@ Library           DateTime
     click link    招标中心
 
 检查是否成功进入钢材库页面
-    select window    title= 钢钢网-钢材库,以最快最便捷的方式找到你所需要的货物
+    ${list}    list windows
+    log    ${list[1]}
+    Wait Until Keyword Succeeds    1min    5sec    select window    ${list[1]}
     ${title}    get title
-    should be equal    ${title}    钢钢网-钢材库,以最快最便捷的方式找到你所需要的货物
+    Should Start With    ${title}    钢钢网
 
 切换窗口至首页
     wait until keyword succeeds    2min    5sec    select window    title=钢钢网-找货,找钱,找车一站式服务,钢铁电商第四方平台
