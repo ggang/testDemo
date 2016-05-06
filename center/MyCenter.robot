@@ -113,6 +113,6 @@ test_ziyuan_canle_order
     [Setup]    公共关键字.进入首页
     [Template]
     ${datetime}    获取当前时间
-    run keyword if    ${datetime.hour}>9 and ${datetime.hour}<13    取消采购订单测试    确定取消
+    run keyword if    ${datetime.hour}>9 and ${datetime.hour}<19    取消采购订单测试    确定取消
     ...    ELSE    log    休市中
     [Teardown]    关闭浏览器
