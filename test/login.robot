@@ -35,7 +35,7 @@ test_sifang
     Maximize Browser Window
     Wait Until Page Contains Element    xpath=/html/body/div[4]/ul/li[2]/a/span    10    元素未加载出来
     click element    xpath=/html/body/div[4]/ul/li[2]/a/span
-    Wait Until Keyword Succeeds    1min    5sec    select window    urxl=http://www7.53kf.com/webCompany.php?arg=10107107&style=1
+    Wait Until Keyword Succeeds    1min    5sec    select window    url=http://www7.53kf.com/webCompany.php?arg=10107107&style=1
     ${title}    get title
     should start with    ${title}    钢钢网
     [Teardown]    关闭浏览器
