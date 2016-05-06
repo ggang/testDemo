@@ -65,7 +65,7 @@ Library           DateTime
     Should Start With    ${title}    钢钢网
 
 切换窗口至首页
-    wait until keyword succeeds    2min    5sec    select window    title=钢钢网-找货,找钱,找车一站式服务,钢铁电商第四方平台
+    Run Keyword And Ignore Error    wait until keyword succeeds    2min    3sec    select window    title=钢钢网-找货,找钱,找车一站式服务,钢铁电商第四方平台
 
 获取链接地址
     [Arguments]    ${str}
