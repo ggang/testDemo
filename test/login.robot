@@ -33,8 +33,8 @@ test_cookie
 test_sifang
     [Setup]    公共关键字.进入首页
     Maximize Browser Window
-    Wait Until Page Contains Element    xpath=/html/body/div[4]/ul/li[2]/a/span    10    元素未加载出来
-    click element    xpath=/html/body/div[4]/ul/li[2]/a/span
+    Wait Until Page Contains Element    xpath=/html/body/div[1]/div/div[2]/a[2]    10    元素未加载出来
+    click element    xpath=/html/body/div[1]/div/div[2]/a[2]
     Wait Until Keyword Succeeds    1min    5sec    select window    url=http://www7.53kf.com/webCompany.php?arg=10107107&style=1
     ${title}    get title
     should start with    ${title}    钢钢网
