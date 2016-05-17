@@ -82,5 +82,5 @@ Library           Selenium2Library
     click element    css=.liji
 
 点击客服按钮
-    Wait Until Page Contains Element    xpath=/html/body/div[4]/ul/li[2]/a/span    10    元素未加载出来
-    click element    xpath=/html/body/div[4]/ul/li[2]/a/span
+    Wait Until Page Contains Element    xpath=/html/body/div[1]/div/div[2]/a[2]    10    元素未加载出来
+    click element    xpath=/html/body/div[1]/div/div[2]/a[2]
