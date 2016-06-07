@@ -12,5 +12,5 @@ Resource          ../../keywordManaer/会员登录.robot
     ...    ELSE IF    '${expected_staus}'=='3'    获取并点击快报第三条记录
     ...    ELSE IF    '${expected_staus}'=='4'    获取并点击快报第四条记录
     ...    ELSE IF    '${expected_staus}'=='5'    获取并点击快报第五条记录
-    ...    ELSE        获取并点击快报更多记录
+    ...    ELSE    获取并点击快报更多记录
     [Return]    ${text}

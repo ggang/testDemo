@@ -8,19 +8,19 @@ Resource          keywordManaer/钢材库.robot
 
 *** Keywords ***
 登录测试
-    [Arguments]    ${username}    ${password}    ${expected}
+    [Arguments]    ${username}    ${password}    ${status}    ${expected}
     [Documentation]    登录模板检查登录是否成功、需要检查登录成功参数请写pass
     ...    如果需要检查登录失败请写“failed”
     [Tags]    高
-    登录流程    ${username}    ${password}
+    登录流程    ${username}    ${password}    ${status}
     登录检查    ${expected}
     退出登录判断    ${expected}
     等待加载首页页面    ${expected}
 
 个人中心测试
-    [Arguments]    ${username}    ${password}    ${excpeted}
+    [Arguments]    ${username}    ${password}    ${status}    ${excpeted}
     [Tags]    一般
-    进入个人中心流程    ${username}    ${password}    ${excpeted}
+    进入个人中心流程    ${username}    ${password}    ${status}    ${excpeted}
     检查进入个人中心是否成功
 
 完善个人信息测试
@@ -281,9 +281,10 @@ Resource          keywordManaer/钢材库.robot
     ...    '${status}'=='unlogin' 未登录申请，进入登录页面
     ${href}    run keyword if    '${status}'=='login'    立即申请钢票流程    ${name}    ${key}
     ...    ELSE IF    '${status}'=='unlogin'    未登录立即申请钢票流程    ${name}    ${key}
+    ${href}    set variable    http://sso.ggang.cn/SSoOperater/SSoLoginIndex?url=http://www.ggang.cn/
     检查申请是否跳入相应页面    ${href}
-    关闭当前页面
-    切换窗口至首页
+    Comment    关闭当前页面
+    Comment    切换窗口至首页
 
 联系客服测试
     [Arguments]    ${url}

@@ -5,12 +5,14 @@ Resource          keywordManaer/修改密码.robot
 Resource          keywordManaer/会员登录.robot
 
 *** Keywords ***
-登录页面
+企业会员登录页面
     [Arguments]    ${user_name}    ${password}
     [Documentation]    登录页面
     点击进入登录页面
-    输入用户名    ${user_name}
-    输入密码    ${password}
+    全屏操作
+    切换至企业会员登录
+    输入企业会员用户名    ${user_name}
+    输入企业会员密码    ${password}
     点击登录
 
 登录检查
@@ -18,7 +20,8 @@ Resource          keywordManaer/会员登录.robot
     [Documentation]    检查登录是否成功、需要检查登录成功参数请写pass
     ...    如果需要检查登录失败请写“failed”
     run keyword if    '${excepted}'=='pass'    检查登录是否成功
-    run keyword if    '${excepted}'=='failed'    检查登录失败
+    run keyword if    '${excepted}'=='failed'    检查登录是否失败
+    run keyword if    '${excepted}'=='switch'    检查是否提示切换企业会员登录
 
 进入个人中心
     全屏操作
@@ -57,6 +60,14 @@ Resource          keywordManaer/会员登录.robot
 退出登录判断
     [Arguments]    ${expected}
     run keyword if    '${expected}'=='pass'    点击退出按钮
-    run keyword if    '${expected}'=='密码修改成功'    点击退出按钮
+    run keyword if    '${expected}'=='密码修改成功'    log    密码修改成功
     run keyword if    '${expected}'=='不能为空'    点击退出按钮
     run keyword if    '${expected}'=='添加成功'    点击退出按钮
+
+普通会员登录页面
+    [Arguments]    ${username}    ${password}
+    点击进入登录页面
+    全屏操作
+    输入普通会员用户名    ${username}
+    输入普通会员密码    ${password}
+    点击登录

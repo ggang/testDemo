@@ -1,6 +1,10 @@
-__all__ = ['base_url','login_user','password','result','upload_file','new_url']
+__all__ = ['base_url','login_user','business_user','Manager_user','finance_user','password','result','upload_file','new_url','status']
 base_url='http://www.ggang.cn'
-login_user='13611873856'
+login_user='13918739640'
+business_user='13052560931'
+finance_user='13611873856'
+Manager_user='803358_admin'
+status=['normal','member']
 password='123456'
 result='pass'
 upload_file='upload.xls'

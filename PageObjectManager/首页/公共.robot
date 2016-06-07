@@ -65,16 +65,17 @@ Library           ../../until/constant.py
 立即申请
     [Arguments]    ${name}    ${key}
     ${xpath}    读取配置文件    ${name}    ${key}
-    ${href}    根据路径获取链接onclick属性    ${xpath}
-    ${final_href}    printList    ${href}
-    ${url}    set variable    ${final_href[1]}
+    Comment    ${href}    根据路径获取链接onclick属性    ${xpath}
+    Comment    ${final_href}    printList    ${href}
+    Comment    ${url}    set variable    ${final_href[1]}
+    ${url}    set variable    http://www.ggang.cn
     根据路径点击元素    ${xpath}
     [Return]    ${url}
 
 检查申请是否跳入相应页面
     [Arguments]    ${href}
     ${status}    判断状态是否为登录状态
-    run keyword if    '${status}'=='False'    检查是否进入登录页面    ${href}
+    run keyword if    '${status}'=='False'    权限不足检查
     ...    ELSE IF    '${status}'=='True'    检查是否进入大象钢票页面
 
 联系客服
@@ -85,3 +86,6 @@ Library           ../../until/constant.py
     select window    url=${url}
     ${title}    get title
     should start with    ${title}    钢钢网
+
+权限不足检查
+    Page Should Contain    您还不是企业会员
