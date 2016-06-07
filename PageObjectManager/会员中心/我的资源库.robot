@@ -66,7 +66,7 @@ Resource          ../../keywordManaer/我的资源库.robot
     run keyword if    '${expected}'=='删除成功'    检查删除是否成功    ${product_name}
 
 删除产品信息
-    选中第一条记录
+    选中全部
     选中删除
 
 检查上下架是否成功

@@ -8,7 +8,7 @@ Resource          ../../keywordManaer/公共关键字.robot
 
 检查是否成功进入相应页面
     ${status}    判断状态是否为登录状态
-    run keyword if    '${status}'=='False'    检查是否进入登录页面    http://sso.ggang.cn/SSoOperater/SSoLoginIndex?url=http://bill.ggang.cn/BusinessBill/AddBillInfo
+    run keyword if    '${status}'=='False'    检查是否进入登录页面    http://sso.ggang.cn/SSoOperater/SSoLoginIndex?url=http://user.ggang.cn/
     ...    ELSE IF    '${status}'=='True'    检查是否成功跳入申请钢票贷页面
 
 以票换钱

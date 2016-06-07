@@ -10,25 +10,24 @@ Library           Selenium2Library
 关闭浏览器
     close all browsers
 
-输入用户名
+输入企业会员用户名
     [Arguments]    ${username}
-    Maximize Browser Window
-    input text    id=txtUsrName    ${username}
+    input text    css=.useradmin    ${username}
 
-输入密码
+输入企业会员密码
     [Arguments]    ${pwd}
-    input text    xpath=//input[@type="password"]    ${pwd}
+    input text    css=.passAdmin    ${pwd}
 
 点击登录
     [Documentation]    点击登录按钮
-    click button    id=btnLogin
+    click button    css=.logBtn
 
 检查登录是否成功
     [Documentation]    检查登录： 1.此处用的方法为：登录成功后页面显示”退出按钮“
     ...    还有一种方法：检查COOKIE值中是否包含TOKENID，如果有代表成功登录
     wait until page contains element    id=btnLogOut    8
 
-检查登录失败
+检查登录是否失败
     ${msg}    get alert message
     should be equal    ${msg}    用户名或密码不正确
 
@@ -56,9 +55,23 @@ Library           Selenium2Library
     Maximize browser window
 
 点击退出按钮
-    wait until page contains element    id=btnLogOut    20
-    click button    id= btnLogOut
+    wait until keyword succeeds    1min    2sec    click button    id= btnLogOut
 
 等待加载首页页面
     [Arguments]    ${ecpected}
     run keyword if    '${ecpected}'=='pass'    wait until page contains element    xpath= //input[@value="登录"]    20    首页未加载出来
+
+检查是否提示切换企业会员登录
+    ${msg}    get alert message
+    should be equal    ${msg}    请切换至企业会员登录
+
+切换至企业会员登录
+    Wait Until Keyword Succeeds    1min    2sec    click element    xpath=//*[@id="myform"]/div[3]/div/div/ul/li[2]
+
+输入普通会员用户名
+    [Arguments]    ${username}
+    input text    css=.userPhone    ${username}
+
+输入普通会员密码
+    [Arguments]    ${password}
+    input text    css=.userPass    ${password}

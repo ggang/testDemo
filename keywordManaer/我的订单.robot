@@ -9,10 +9,10 @@ Library           Selenium2Library
     wait until page contains    我的订单    80    我的订单加载失败
 
 检查是否成功进入订单页面
-    wait until page contains element    xpath=/html/body/div[4]/div[2]/div/div[1]/div[2]/input    10    没有进入我的订单页面
+    wait until page contains element    css=.AddOrder    10    没有进入我的订单页面
 
 点击创建采购清单
-    click button    xpath=/html/body/div[4]/div[2]/div/div[1]/div[2]/input
+    wait until keyword succeeds    1min    2sec    click button    css=.AddOrder
 
 选择交易状态
     [Arguments]    ${value}
@@ -91,8 +91,8 @@ Library           Selenium2Library
     wait until page contains    暂无数据
 
 点击修改采购清单
-    wait until page contains element    xpath=//table/tbody/tr/td[7]/i    20    修改采购清单按钮没有出现
-    click element    xpath=//table/tbody/tr/td[7]/i
+    wait until page contains element    xpath=//table/tbody/tr[1]/td[8]/i    20    修改采购清单按钮没有出现
+    click element    xpath=//table/tbody/tr[1]/td[8]/i
 
 检查创建采购订单是否成功
     wait until page contains    保存成功
@@ -101,8 +101,8 @@ Library           Selenium2Library
     wait until page contains    保存成功
 
 点击取消订单
-    wait until page contains element    xpath=//table/tbody/tr[1]/td[7]/a    20    没有加载出取消订单按钮
-    click element    xpath=//table/tbody/tr[1]/td[7]/a
+    wait until page contains element    xpath=//table/tbody/tr[1]/td[8]/a    20    没有加载出取消订单按钮
+    click element    xpath=//table/tbody/tr[1]/td[8]/a
     [Teardown]
 
 获取取消消息提示

@@ -231,7 +231,7 @@ test_apply_spd
 test_fbzy
     [Documentation]    发布资源
     [Setup]    公共关键字.进入首页
-    发布资源测试    http://www.ggang.cn/logistics.html
+    发布资源测试    http://www.ggang.cn/Copyright/Logistics
     [Teardown]    关闭浏览器
 
 test_apply_justnow

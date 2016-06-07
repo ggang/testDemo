@@ -19,21 +19,22 @@ Resource          PageObjectManager/首页/首页底部.robot
 
 *** Keywords ***
 登录流程
-    [Arguments]    ${user_name}    ${password}
+    [Arguments]    ${user_name}    ${password}    ${status}
     [Documentation]    登录场景的封装
-    登录页面    ${user_name}    ${password}
+    run keyword if    '${status}'=='normal'    普通会员登录页面    ${user_name}    ${password}
+    ...    ELSE IF    '${status}'=='member'    企业会员登录页面    ${user_name}    ${password}
 
 进入个人中心流程
-    [Arguments]    ${username}    ${password}    ${expected}
+    [Arguments]    ${username}    ${password}    ${statu}    ${expected}
     [Documentation]    进入个人中心流程
-    登录流程    ${username}    ${password}
+    登录流程    ${username}    ${password}    ${statu}
     登录检查    ${expected}
-    进入个人中心
+    点击我的钢钢网
 
 完善个人信息流程
     [Arguments]    ${username}    ${sex}    ${company}    ${province}    ${city}    ${address}
     ...    ${qq}
-    进入个人中心流程    ${login_user}    ${password}    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
     检查进入个人中心是否成功
     点击完善信息按钮
     完善信息页面    ${username}    ${sex}    ${company}    ${province}    ${city}    ${address}
@@ -41,7 +42,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 
 修改密码流程
     [Arguments]    ${older}    ${new}    ${confirm}
-    进入个人中心流程    ${login_user}    ${password}    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
     检查进入个人中心是否成功
     等待账户设置列表加载
     点击进入修改密码页面
@@ -50,7 +51,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 
 查询产品资源库流程
     [Arguments]    ${product_name}    ${product_statu}
-    进入个人中心流程    ${login_user}    ${password}    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
@@ -60,7 +61,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 单条添加流程
     [Arguments]    ${product_type}    ${product_name}    ${Specification}    ${material}    ${factory}    ${num}
     ...    ${txtpipce}    ${address}    ${house}    ${weight}    ${price}
-    进入个人中心流程    ${login_user}    ${password}    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
@@ -71,7 +72,7 @@ Resource          PageObjectManager/首页/首页底部.robot
     ...    ${txtpipce}    ${address}    ${house}    ${weight}    ${price}
 
 选中删除流程
-    进入个人中心流程    ${login_user}    ${password}    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
@@ -81,7 +82,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 选中修改流程
     [Arguments]    ${txtWeight}
     [Documentation]    本关键字主要修改产品的库存进行修改
-    进入个人中心流程    ${login_user}    ${password}    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
@@ -90,7 +91,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 
 批量上传流程
     [Arguments]    ${upload_dir}
-    进入个人中心流程    ${login_user}    ${password}    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
@@ -98,7 +99,7 @@ Resource          PageObjectManager/首页/首页底部.robot
     批量添加    ${upload_dir}
 
 选中挂牌流程
-    进入个人中心流程    ${login_user}    ${password}    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
@@ -106,7 +107,7 @@ Resource          PageObjectManager/首页/首页底部.robot
     选中资源挂牌
 
 选中下架流程
-    进入个人中心流程    ${login_user}    ${password}    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
@@ -117,7 +118,7 @@ Resource          PageObjectManager/首页/首页底部.robot
     [Arguments]    ${contact_person}    ${contact_mobile}    ${Invoice_Type}    ${Invoice_title}    ${province}    ${city}
     ...    ${area}    ${address}    ${product_name}    ${specification}    ${material}    ${factory}
     ...    ${num}
-    进入个人中心流程    ${login_user}    ${password}    ${result}
+    进入个人中心流程    ${business_user}    ${password}    @{status}[1]    ${result}
     检查进入个人中心是否成功
     等待我的订单列表成功加载
     点击进入我的订单
@@ -130,7 +131,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 
 修改采购订单流程
     [Arguments]    ${Invoice_title}
-    进入个人中心流程    ${login_user}    ${password}    ${result}
+    进入个人中心流程    ${business_user}    ${password}    @{status}[1]    ${result}
     检查进入个人中心是否成功
     等待我的订单列表成功加载
     点击进入我的订单
@@ -143,7 +144,7 @@ Resource          PageObjectManager/首页/首页底部.robot
     ...    目前其输入值为：
     ...    1.确定取消
     ...    2.撤销取消
-    进入个人中心流程    ${login_user}    ${password}    ${result}
+    进入个人中心流程    ${business_user}    ${password}    @{status}[1]    ${result}
     检查进入个人中心是否成功
     等待我的订单列表成功加载
     点击进入我的订单
@@ -215,7 +216,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 我要买货流程
     [Arguments]    ${name}    ${key}
     全屏操作
-    登录流程    ${login_user}    ${password}
+    登录流程    ${business_user}    ${password}    @{status}[1]
     登录检查    ${result}
     ${href}    我要买货    ${name}    ${key}
     log    ${href}
@@ -229,13 +230,14 @@ Resource          PageObjectManager/首页/首页底部.robot
 
 找货流程
     [Arguments]    ${name}    ${key}
-    登录流程    ${login_user}    ${password}
+    登录流程    ${login_user}    ${password}    @{status}[0]
     登录检查    ${result}
     去找货    ${name}    ${key}
 
 申请商票贷流程
     [Arguments]    ${name}    ${key}
-    登录流程    ${login_user}    ${password}
+    [Documentation]    财务角色申请钢票贷
+    登录流程    ${finance_user}    ${password}    @{status}[1]
     登录检查    ${result}
     申请商票贷    ${name}    ${key}
 
@@ -245,7 +247,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 立即申请钢票流程
     [Arguments]    ${name}    ${key}
     全屏操作
-    登录流程    ${login_user}    ${password}
+    登录流程    ${finance_user}    ${password}    @{status}[1]
     登录检查    ${result}
     ${href}    立即申请    ${name}    ${key}
     [Return]    ${href}

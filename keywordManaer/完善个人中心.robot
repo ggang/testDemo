@@ -4,7 +4,7 @@ Library           Selenium2Library
 
 *** Keywords ***
 点击完善信息按钮
-    click element    xpath=/html/body/div[4]/div[2]/div/ul/li[1]/div/p[2]/a[2]
+    wait until keyword succeeds    1min    2sec    click element    css=.wanshan
 
 输入姓名
     [Arguments]    ${username}

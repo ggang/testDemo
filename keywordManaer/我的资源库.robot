@@ -108,14 +108,14 @@ Library           Selenium2Library
     click element    xpath=//*[@id="retb"]/tr[1]/td[14]/input[@value="修改"]
 
 点击进入我的资源库
-    click element    xpath=/html/body/div[4]/div[1]/dl/dd[1]/a
+    click link    我的资源单
 
 获取查询个数
     ${rows}    get table rows    xpath=/html/body/div[4]/div[2]/div[3]/div[2]/table
     [Return]    ${rows}
 
 等待会员中心列表加载
-    wait until page contains    我的资源库    60    我的资源库列表加载失败
+    wait until page contains    我的资源单    60    我的资源单列表加载失败
 
 查询成功结果检查
     [Arguments]    ${product_type}
@@ -182,3 +182,6 @@ Library           Selenium2Library
 输入查询品名
     [Arguments]    ${product_name}
     input text    id=ProductName    ${product_name}
+
+选中全部
+    wait until keyword succeeds    1min    2sec    click element    css=.checkboxtb

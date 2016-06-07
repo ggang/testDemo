@@ -18,7 +18,7 @@ Resource          ../flow.robot
 登录进入大象钢票流程
     进入首页
     全屏操作
-    登录流程    ${login_user}    ${password}
+    登录流程    ${finance_user}    ${password}    @{status}[1]
     登录检查    ${result}
     点击大象钢票菜单
     检查是否进入大象钢票页面
