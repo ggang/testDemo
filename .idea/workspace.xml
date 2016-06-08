@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6777cd10-5963-438c-afc8-a3da160ee185" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FlowManager/大象钢票.robot" afterPath="$PROJECT_DIR$/FlowManager/大象钢票.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageObjectManager/会员中心/我的资源库.robot" afterPath="$PROJECT_DIR$/PageObjectManager/会员中心/我的资源库.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageObjectManager/大象钢票/商票买钢.robot" afterPath="$PROJECT_DIR$/PageObjectManager/大象钢票/商票买钢.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageObjectManager/钢材库/动态链接.robot" afterPath="$PROJECT_DIR$/PageObjectManager/钢材库/动态链接.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageObjectManager/首页/公共.robot" afterPath="$PROJECT_DIR$/PageObjectManager/首页/公共.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageObjectManager/首页/友情链接.robot" afterPath="$PROJECT_DIR$/PageObjectManager/首页/友情链接.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageObjectManager/首页/四方咨询.robot" afterPath="$PROJECT_DIR$/PageObjectManager/首页/四方咨询.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageObjectManager/首页/行业目录.robot" afterPath="$PROJECT_DIR$/PageObjectManager/首页/行业目录.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageObjectManager/首页/钢材推荐.robot" afterPath="$PROJECT_DIR$/PageObjectManager/首页/钢材推荐.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageObjectManager/首页/钢钢快报.robot" afterPath="$PROJECT_DIR$/PageObjectManager/首页/钢钢快报.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageObjectManager/首页/首页底部.robot" afterPath="$PROJECT_DIR$/PageObjectManager/首页/首页底部.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Template.robot" afterPath="$PROJECT_DIR$/Template.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/center/MyCenter.robot" afterPath="$PROJECT_DIR$/center/MyCenter.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/test_conf.py" afterPath="$PROJECT_DIR$/conf/test_conf.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow.robot" afterPath="$PROJECT_DIR$/flow.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/keyword_conf/url_xpath.conf" afterPath="$PROJECT_DIR$/keywordManaer/keyword_conf/url_xpath.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/会员登录.robot" afterPath="$PROJECT_DIR$/keywordManaer/会员登录.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/修改密码.robot" afterPath="$PROJECT_DIR$/keywordManaer/修改密码.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/完善个人中心.robot" afterPath="$PROJECT_DIR$/keywordManaer/完善个人中心.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/我的订单.robot" afterPath="$PROJECT_DIR$/keywordManaer/我的订单.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keywordManaer/我的资源库.robot" afterPath="$PROJECT_DIR$/keywordManaer/我的资源库.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageObject.robot" afterPath="$PROJECT_DIR$/pageObject.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/index.robot" afterPath="$PROJECT_DIR$/test/index.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/login.robot" afterPath="$PROJECT_DIR$/test/login.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ticketGang.robot" afterPath="$PROJECT_DIR$/test/ticketGang.robot" />
-    </list>
+    <list default="true" id="6777cd10-5963-438c-afc8-a3da160ee185" name="Default" comment="" />
     <ignored path="testDemo.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -468,7 +441,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1060" extended-state="1" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17061612" sideWeight="0.4955414" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
