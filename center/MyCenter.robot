@@ -116,5 +116,3 @@ test_ziyuan_canle_order
     run keyword if    ${datetime.hour}>9 and ${datetime.hour}<19    取消采购订单测试    确定取消
     ...    ELSE    log    休市中
     [Teardown]    关闭浏览器
-
-test_apply_enterprise
