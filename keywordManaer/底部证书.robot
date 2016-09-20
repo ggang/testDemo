@@ -37,6 +37,7 @@ Resource          公共关键字.robot
 
 检查是否进入安全页面
     [Arguments]    ${url}
+    ${url}    set variable    https://www.anquan.org/authenticate/cert/?site=www.ggang.cn&at=realname
     select window    url=${url}
     wait until page contains    品牌宝验证企业身份信息和经营范围是否符合国家法律法规
 
