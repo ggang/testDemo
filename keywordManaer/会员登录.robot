@@ -35,7 +35,7 @@ Library           Selenium2Library
     run keyword if test failed    关闭浏览器
 
 点击进入登录页面
-    wait until page contains element    xpath= //input[@value="登录"]    20    未成功进入登录首页
+    wait until page contains element    xpath= //input[@value="登录"]    30    未成功进入登录首页
     click element    xpath= //input[@value="登录"]
 
 点击我的资源库
