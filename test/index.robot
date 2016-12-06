@@ -189,7 +189,6 @@ test_bottom_certficate _image
     BottomImage    imglink02
     BottomImage    imglink03
     BottomImage    imglink04
-    BottomImage    imglink05
     [Teardown]    关闭浏览器
 
 test_menu_switch
