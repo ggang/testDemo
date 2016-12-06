@@ -144,7 +144,6 @@ test_friendly_link
     [Setup]    公共关键字.进入首页
     [Template]    点击友情链接测试
     BottomfriendlyLink    link1
-    BottomfriendlyLink    link2
     BottomfriendlyLink    link3
     BottomfriendlyLink    link4
     BottomfriendlyLink    link5
