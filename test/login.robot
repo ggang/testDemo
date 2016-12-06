@@ -21,6 +21,7 @@ login
     [Teardown]    会员登录.关闭浏览器
 
 test_cookie
+    [Documentation]    检查cookie
     [Setup]    公共关键字.进入首页
     登录流程    13611873856    123456    member
     登录检查    pass
@@ -49,6 +50,7 @@ test_if
     \    run keyword if    ${j}<=5    log    hello
 
 test_time
+    [Documentation]    时间获取
     ${date}    get current date
     ${datetime}    convert date    ${date}    datetime
     run keyword if    ${datetime.hour}>9 and ${datetime.hour}<19    log    aaaaaaaaaaaaaaaaaaa
