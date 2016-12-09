@@ -19,7 +19,7 @@ Library           Selenium2Library
     click button    id=btnSearch
 
 点击单条添加
-    click element    xpath=//input[@value="单条添加"]
+    wait until keyword succeeds    1min    5sec    click element    xpath=//input[@value="单条添加"]
 
 点击批量添加
     click element    xpath=//input[@value="批量添加"]
