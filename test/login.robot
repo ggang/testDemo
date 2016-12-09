@@ -34,6 +34,7 @@ test_cookie
     [Teardown]    关闭浏览器
 
 test_sifang
+    [Documentation]    联系客服
     [Setup]    公共关键字.进入首页
     Maximize Browser Window
     Wait Until Page Contains Element    xpath=/html/body/div[1]/div/div[2]/a[2]    10    元素未加载出来
@@ -42,12 +43,6 @@ test_sifang
     ${title}    get title
     should start with    ${title}    钢钢网
     [Teardown]    关闭浏览器
-
-test_if
-    ${a}    set variable    1
-    run keyword if    ${a}<4    log    4
-    : FOR    ${j}    IN RANGE    1    11
-    \    run keyword if    ${j}<=5    log    hello
 
 test_time
     [Documentation]    时间获取

@@ -186,8 +186,6 @@ test_bottom_certficate _image
     [Template]    底部证书链接测试
     BottomImage    imglink01
     BottomImage    imglink02
-    BottomImage    imglink03
-    BottomImage    imglink04
     [Teardown]    关闭浏览器
 
 test_menu_switch
