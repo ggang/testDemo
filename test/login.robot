@@ -16,8 +16,7 @@ login
     [Template]    登录测试
     [Timeout]
     13611873856    123456    member    pass
-    13918739640    123456    normal    pass
-    431856_admin    123456    member    pass
+    13918739640    123456    member    pass
     [Teardown]    会员登录.关闭浏览器
 
 test_cookie
@@ -31,17 +30,6 @@ test_cookie
     run keyword if    '${status}'=='False'    click element    xpath=/html/body/div[2]/div/input
     ...    ELSE IF    '${status}'=='True'    LOG    1111111111111111111
     ...    ELSE    LOG    22222222222222222222222
-    [Teardown]    关闭浏览器
-
-test_sifang
-    [Documentation]    联系客服
-    [Setup]    公共关键字.进入首页
-    Maximize Browser Window
-    Wait Until Page Contains Element    xpath=/html/body/div[1]/div/div[2]/a[2]    10    元素未加载出来
-    click element    xpath=/html/body/div[1]/div/div[2]/a[2]
-    Wait Until Keyword Succeeds    1min    5sec    select window    url=http://www7.53kf.com/webCompany.php?arg=10107107&style=1
-    ${title}    get title
-    should start with    ${title}    钢钢网
     [Teardown]    关闭浏览器
 
 test_time

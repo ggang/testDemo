@@ -34,7 +34,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 完善个人信息流程
     [Arguments]    ${username}    ${sex}    ${company}    ${province}    ${city}    ${address}
     ...    ${qq}
-    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[1]    ${result}
     检查进入个人中心是否成功
     点击完善信息按钮
     完善信息页面    ${username}    ${sex}    ${company}    ${province}    ${city}    ${address}
@@ -42,7 +42,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 
 修改密码流程
     [Arguments]    ${older}    ${new}    ${confirm}
-    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[1]    ${result}
     检查进入个人中心是否成功
     等待账户设置列表加载
     点击进入修改密码页面
@@ -51,7 +51,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 
 查询产品资源库流程
     [Arguments]    ${product_name}    ${product_statu}
-    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[1]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
@@ -61,7 +61,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 单条添加流程
     [Arguments]    ${product_type}    ${product_name}    ${Specification}    ${material}    ${factory}    ${num}
     ...    ${txtpipce}    ${address}    ${house}    ${weight}    ${price}
-    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[1]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
@@ -72,7 +72,7 @@ Resource          PageObjectManager/首页/首页底部.robot
     ...    ${txtpipce}    ${address}    ${house}    ${weight}    ${price}
 
 选中删除流程
-    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[1]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
@@ -82,7 +82,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 选中修改流程
     [Arguments]    ${txtWeight}
     [Documentation]    本关键字主要修改产品的库存进行修改
-    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[1]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
@@ -91,7 +91,7 @@ Resource          PageObjectManager/首页/首页底部.robot
 
 批量上传流程
     [Arguments]    ${upload_dir}
-    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[1]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库
@@ -99,7 +99,7 @@ Resource          PageObjectManager/首页/首页底部.robot
     批量添加    ${upload_dir}
 
 选中挂牌流程
-    进入个人中心流程    ${login_user}    ${password}    @{status}[0]    ${result}
+    进入个人中心流程    ${login_user}    ${password}    @{status}[1]    ${result}
     检查进入个人中心是否成功
     等待会员中心列表加载
     点击进入我的资源库

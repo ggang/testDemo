@@ -4,17 +4,9 @@ Resource          ../TemplateManager/四方资讯.robot
 
 *** Test Cases ***
 test_sqare_link
-    [Documentation]    钢钢要闻所有链接、行业动态所有链接
+    [Documentation]    四方资讯-行业动态
     [Setup]    进入四方资讯流程
-    [Template]    四方资讯动态链接测试
-    sqareInformation    importNews01
-    sqareInformation    importNews02
-    sqareInformation    importNews03
-    sqareInformation    importNews04
-    sqareInformation    importNews05
-    sqareInformation    importNews06
-    sqareInformation    importNews07
-    sqareInformation    importNews08
+    [Template]    四方资讯行业动态链接测试
     sqareInformation    hangyedongtai01
     sqareInformation    hangyedongtai02
     sqareInformation    hangyedongtai03
@@ -30,7 +22,6 @@ test_sqare_link
     sqareInformation    hangyedongtai13
     sqareInformation    hangyedongtai14
     sqareInformation    hangyedongtai15
-    sqareInformation    hangyedongtai16
     [Teardown]    关闭浏览器
 
 test_sqare_xiayoudongtai_link
@@ -55,8 +46,8 @@ test_sqare_xiayoudongtai_link
     sqareInformation    xiayoudongtai16
     [Teardown]    关闭浏览器
 
-test_sqare_xinwendongtai_link
-    [Documentation]    四方资讯新闻动态链接测试
+test_sqare_xinwen_link
+    [Documentation]    四方资讯页面，新闻资讯链接测试
     [Setup]    进入四方资讯流程
     [Template]    四方资讯新闻快报链接测试
     sqareInformation    xinwendongtai01
@@ -74,7 +65,6 @@ test_sqare_xinwendongtai_link
     sqareInformation    xinwendongtai13
     sqareInformation    xinwendongtai14
     sqareInformation    xinwendongtai15
-    sqareInformation    xinwendongtai16
     [Teardown]    关闭浏览器
 
 test_sqare_hongguanjingji_link

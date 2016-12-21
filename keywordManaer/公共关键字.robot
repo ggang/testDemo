@@ -22,14 +22,14 @@ Library           DateTime
 
 点击钢钢网首页
     click link    钢钢网首页
+    点击logo
 
 输入搜索条件
     [Arguments]    ${serach}
-    input text    xpath=/html/body/div[2]/div/div[1]/div[1]/input[1]    ${serach}
+    input text    id=serarchText    ${serach}
 
 点击搜索按钮
-    wait until element is visible    xpath=/html/body/div[2]/div/div[1]/div[1]/input[2]    20    元素加载失败
-    click button    xpath=/html/body/div[2]/div/div[1]/div[1]/input[2]
+    wait until keyword succeeds    1min    2sec    click element    xpath=/html/body/div[1]/div/div[1]/span
 
 点击我要买货
     [Arguments]    ${xpath}
@@ -179,10 +179,10 @@ Library           DateTime
     [Return]    ${title}
 
 检查是否进入新闻链接详情页面
-    [Arguments]    ${url}    ${title}
+    [Arguments]    ${url}    ${text}
     [Documentation]    检查新闻内容是否包含链接的标题，如果包含就代表已经成功加载
     select window    url=${url}
-    wait until page contains    ${title}
+    wait until page contains    ${text}
 
 拖动窗口至底部
     Execute Javascript    document.documentElement.scrollTop=9000
@@ -230,3 +230,16 @@ Library           DateTime
     ${date}    get current date
     ${datetime}    convert date    ${date}    datetime
     [Return]    ${datetime}
+
+点击logo
+    wait until keyword succeeds    1min    2sec    click link    http://www.ggang.cn/
+
+滚动屏幕至底部
+    [Documentation]    滚动屏幕至底部
+    Execute Javascript    document.documentElement.scrollTop=9000
+
+根据路径获取相关属性
+    [Arguments]    ${xpath}    ${attribute}
+    wait until page contains element    xpath=${xpath}    20    元素未加载
+    ${attr}    get element attribute    xpath=${xpath}@${attribute}
+    [Return]    ${attr}

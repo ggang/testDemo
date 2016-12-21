@@ -29,7 +29,7 @@ def TableXpath():
     xpath=[]
     for row in range(1,7):
         for cloum in range(1,7):
-            msg='/html/body/div[7]/div[2]/table/tbody/tr['+str(row)+']/td['+str(cloum)+']'
+            msg='/html/body/div[2]/div[3]/div[2]/div/table/tbody/tr['+str(row)+']/td['+str(cloum)+']'
             xpath.append(msg)
     print xpath
     return xpath

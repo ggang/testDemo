@@ -27,6 +27,11 @@ test_recommenInfo
     zhaobiaoCenter    recomandInformation18
     zhaobiaoCenter    recomandInformation19
     zhaobiaoCenter    recomandInformation20
+    zhaobiaoCenter    recomandInformation21
+    zhaobiaoCenter    recomandInformation22
+    zhaobiaoCenter    recomandInformation23
+    zhaobiaoCenter    recomandInformation24
+    zhaobiaoCenter    recomandInformation25
     zhaobiaoCenter    zhaobiaoinfo01
     zhaobiaoCenter    zhaobiaoinfo02
     zhaobiaoCenter    zhaobiaoinfo03

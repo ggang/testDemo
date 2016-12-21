@@ -9,7 +9,7 @@ mycenter
     [Documentation]    个人中心测试
     [Tags]    高
     [Setup]    公共关键字.进入首页
-    个人中心测试    ${login_user}    ${password}    @{status}[0]    ${result}
+    个人中心测试    ${login_user}    ${password}    @{status}[1]    ${result}
     [Teardown]    关闭浏览器
 
 test_modiy_info
@@ -18,8 +18,6 @@ test_modiy_info
     [Setup]    公共关键字.进入首页
     [Template]    完善个人信息测试
     张三    女    钢钢网    上海    上海    漕河泾开发区    471618565
-    ...    pass
-    张四    男    钢钢网股份    上海    上海    漕河泾开发区    471618565
     ...    pass
     [Teardown]    关闭浏览器
 

@@ -31,8 +31,8 @@ Resource          keywordManaer/钢材库.robot
     ...    ${qq}
     完善信息检查    ${expected}
     点击钢钢网首页链接    ${expected}
-    退出登录判断    ${expected}
-    等待加载首页页面    ${expected}
+    Comment    退出登录判断    ${expected}
+    Comment    等待加载首页页面    ${expected}
 
 修改密码测试
     [Arguments]    ${older}    ${new}    ${confirm}    ${expected}
@@ -169,7 +169,7 @@ Resource          keywordManaer/钢材库.robot
     ${text}    点击四方新闻快报流程    ${url_link}
     ${url}    获取链接地址    ${text}
     log    ${url}
-    检查是否正确链接到新闻页面    ${url}
+    检查是否正确链接到新闻资讯页面    ${url}
     关闭当前页面
     切换窗口至首页
 
