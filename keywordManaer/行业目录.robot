@@ -2,6 +2,7 @@
 Library           Selenium2Library
 Library           ../until/constant.py
 Variables         ../conf/test_conf.py
+Resource          公共关键字.robot
 
 *** Keywords ***
 点击并获取行业动态
@@ -10,7 +11,7 @@ Variables         ../conf/test_conf.py
     ${key}    Evaluate    '${link_key}'.encode("utf-8")
     ${path}    set variable    ${CURDIR}${/}keyword_conf${/}url_xpath.conf
     ${xpath}    Read config    ${path}    ${name}    ${key}
-    Execute Javascript    document.documentElement.scrollTop=9000
+    滚动屏幕至底部
     Wait Until Page Contains Element    xpath=${xpath}    10    元素未加载
     ${onlick}    Get Element Attribute    xpath=${xpath}@onclick
     click element    xpath=${xpath}

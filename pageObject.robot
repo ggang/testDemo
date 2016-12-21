@@ -13,7 +13,7 @@ Resource          keywordManaer/会员登录.robot
     切换至企业会员登录
     输入企业会员用户名    ${user_name}
     输入企业会员密码    ${password}
-    点击登录
+    点击企业登录按钮
 
 登录检查
     [Arguments]    ${excepted}

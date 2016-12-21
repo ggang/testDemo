@@ -12,9 +12,9 @@ Library           Selenium2Library
     click link    http://www.ggang.cn/newskuaibao/Index/64
 
 获取并点击快报最新一条信息
-    Wait Until Page Contains Element    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[1]/a    20    链接未加载出来
-    ${text}    get element attribute    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[1]/a@href
-    click element    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[1]/a
+    Wait Until Page Contains Element    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/p[2]/a    20    链接未加载出来
+    ${text}    get element attribute    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/p[2]/a@href
+    click element    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/p[2]/a
     [Return]    ${text}
 
 点击更多（钢材推荐）
@@ -43,27 +43,27 @@ Library           Selenium2Library
     [Return]    ${href}
 
 获取并点击快报第二条记录
-    Wait Until Page Contains Element    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[2]/a    20    链接未加载出来
-    ${text}    get element attribute    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[2]/a@href
-    click element    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[2]/a
+    Wait Until Page Contains Element    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/ol[1]/li/a    20    链接未加载出来
+    ${text}    get element attribute    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/ol[1]/li/a@href
+    click element    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/ol[1]/li/a
     [Return]    ${text}
 
 获取并点击快报第三条记录
-    Wait Until Page Contains Element    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[3]/a    20    链接未加载出来
-    ${text}    get element attribute    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[3]/a@href
-    click element    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[3]/a
+    Wait Until Page Contains Element    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/ol[1]/li/a    20    链接未加载出来
+    ${text}    get element attribute    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/ol[1]/li/a@href
+    click element    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/ol[1]/li/a
     [Return]    ${text}
 
 获取并点击快报第四条记录
-    Wait Until Page Contains Element    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[4]/a    20    链接未加载出来
-    ${text}    get element attribute    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[4]/a@href
-    click element    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[4]/a
+    Wait Until Page Contains Element    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/ol[3]/li/a    20    链接未加载出来
+    ${text}    get element attribute    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/ol[3]/li/a@href
+    click element    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/ol[3]/li/a
     [Return]    ${text}
 
 获取并点击快报第五条记录
-    Wait Until Page Contains Element    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[5]/a    20    链接未加载出来
-    ${text}    get element attribute    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[5]/a@href
-    click element    xpath=/html/body/div[5]/div/div[2]/div[2]/ul/li[5]/a
+    Wait Until Page Contains Element    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/ol[4]/li/a    20    链接未加载出来
+    ${text}    get element attribute    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/ol[4]/li/a@href
+    click element    xpath=/html/body/div[2]/div[3]/div[5]/div/ul/li[1]/ol[4]/li/a
     [Return]    ${text}
 
 快报内容检查是否正确
@@ -74,7 +74,7 @@ Library           Selenium2Library
     [Arguments]    ${href}
     select window    url=${href}
     run keyword if    '${href}'=='http://www.ggang.cn/newskuaibao/Index/64'    page should contain    钢钢快报
-    ...    ELSE    page should contain image    钢钢网
+    ...    ELSE    page should contain    钢钢快报
 
 点击申请大象钢票
     Maximize Browser Window
