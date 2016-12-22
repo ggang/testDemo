@@ -47,7 +47,7 @@ test_sqare_xiayoudongtai_link
     [Teardown]    关闭浏览器
 
 test_sqare_xinwen_link
-    [Documentation]    四方资讯页面，新闻资讯链接测试
+    [Documentation]    四方资讯页面，新闻资讯/宏观经济链接测试
     [Setup]    进入四方资讯流程
     [Template]    四方资讯新闻快报链接测试
     sqareInformation    xinwendongtai01
@@ -65,16 +65,30 @@ test_sqare_xinwen_link
     sqareInformation    xinwendongtai13
     sqareInformation    xinwendongtai14
     sqareInformation    xinwendongtai15
+    sqareInformation    hongguanjingji07
+    sqareInformation    hongguanjingji08
+    sqareInformation    hongguanjingji09
+    sqareInformation    hongguanjingji10
+    sqareInformation    hongguanjingji11
+    sqareInformation    hongguanjingji12
+    sqareInformation    hongguanjingji13
+    sqareInformation    hongguanjingji14
+    sqareInformation    hongguanjingji15
+    sqareInformation    hongguanjingji16
+    sqareInformation    hongguanjingji17
+    sqareInformation    hongguanjingji18
     [Teardown]    关闭浏览器
 
 test_sqare_hongguanjingji_link
-    [Documentation]    宏观经济链接测试
+    [Documentation]    宏观经济链接测试（前6个）
     [Setup]    进入四方资讯流程
     [Template]    四方资讯宏观经济链接测试
     sqareInformation    hongguanjingji01
     sqareInformation    hongguanjingji02
     sqareInformation    hongguanjingji03
     sqareInformation    hongguanjingji04
+    sqareInformation    hongguanjingji05
+    sqareInformation    hongguanjingji06
     [Teardown]    关闭浏览器
 
 test_sqare_jiaodiannew_link

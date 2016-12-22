@@ -102,3 +102,8 @@ Resource          公共关键字.robot
     [Arguments]    ${url}
     select window    url=${url}
     wait until keyword succeeds    1min    2sec    page should contain    焦点新闻
+
+检验是否链接到宏观经济页面
+    [Arguments]    ${url}
+    select window    url=${url}
+    wait until keyword succeeds    1min    2sec    page should contain    宏观经济

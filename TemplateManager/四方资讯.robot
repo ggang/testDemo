@@ -33,10 +33,9 @@ Resource          ../keywordManaer/四方资讯.robot
 四方资讯宏观经济链接测试
     [Arguments]    ${name}    ${key}
     ${xpath}    读取配置文件    ${name}    ${key}
-    ${url}    点击四方资讯宏观经济流程    ${xpath}
-    检查是否正确链接到新闻页面    ${url}
-    关闭当前页面
-    切换到四方资讯页面
+    ${href}    根据路径获取链接地址    ${xpath}
+    点击四方资讯宏观经济流程    ${xpath}    ${href}
+    go back
 
 四方资讯焦点新闻链接测试
     [Arguments]    ${name}    ${key}

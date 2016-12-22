@@ -5,6 +5,7 @@ Resource          ../keywordManaer/钢材库.robot
 Resource          ../keywordManaer/四方资讯.robot
 Resource          ../PageObjectManager/四方资讯/行业动态.robot
 Resource          ../PageObjectManager/四方资讯/新闻资讯.robot
+Resource          ../PageObjectManager/四方资讯/宏观经济.robot
 
 *** Keywords ***
 进入四方资讯流程
@@ -36,13 +37,12 @@ Resource          ../PageObjectManager/四方资讯/新闻资讯.robot
     检查是否成功进入新闻资讯页面    ${xpath}
 
 点击四方资讯宏观经济流程
-    [Arguments]    ${xpath}
-    鼠标悬浮宏观经济
-    ${href}    根据路径获取链接onclick 属性    ${xpath}
-    ${url}    获取链接地址    ${href}
-    ${final_url}    加入新闻地址    ${url}
-    点击动态链接    ${xpath}
-    [Return]    ${final_url}
+    [Arguments]    ${xpath}    ${href}
+    Comment    execute javascript    $(".ol-l li").addClass('active');
+    Comment    execute javascript    document.documentElement.scrollTop=5000
+    设置宏观经济列表属性
+    点击宏观经济链接    ${xpath}
+    检验是否成功进入宏观经济页面    ${href}
 
 点击四方资讯焦点新闻流程
     [Arguments]    ${xpath}
