@@ -131,22 +131,6 @@ test_menu_switch
     Menu    menulink06
     [Teardown]    关闭浏览器
 
-test_wantBy_login
-    [Documentation]    我要买，登录后点击我要买，进入购买订单流程
-    [Setup]    公共关键字.进入首页
-    ${datetime}    获取当前时间
-    log    ${datetime.hour}
-    run keyword if    ${datetime.hour}>9 and ${datetime.hour}<19    我要买货测试    indexActivex    wantBy    logined
-    [Teardown]    关闭浏览器
-
-test_wantBy_unlogin
-    [Documentation]    我要买，未登录进入登录页面
-    [Setup]    公共关键字.进入首页
-    ${datetime}    获取当前时间
-    log    ${datetime.hour}
-    run keyword if    ${datetime.hour}>9 and ${datetime.hour}<19    我要买货测试    indexActivex    wantBy    unlogin
-    [Teardown]    关闭浏览器
-
 test_gg_kb
     [Documentation]    钢钢快报
     [Setup]    公共关键字.进入首页

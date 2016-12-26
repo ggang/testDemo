@@ -6,6 +6,8 @@ Resource          ../keywordManaer/四方资讯.robot
 Resource          ../PageObjectManager/四方资讯/行业动态.robot
 Resource          ../PageObjectManager/四方资讯/新闻资讯.robot
 Resource          ../PageObjectManager/四方资讯/宏观经济.robot
+Resource          ../PageObjectManager/四方资讯/下游动态.robot
+Resource          ../PageObjectManager/四方资讯/新闻top.robot
 
 *** Keywords ***
 进入四方资讯流程
@@ -24,12 +26,8 @@ Resource          ../PageObjectManager/四方资讯/宏观经济.robot
 
 点击四方资讯下游动态流程
     [Arguments]    ${xpath}
-    鼠标悬浮下游动态
-    ${href}    根据路径获取链接onclick 属性    ${xpath}
-    ${url}    获取链接地址    ${href}
-    ${final_url}    加入新闻地址    ${url}
-    点击动态链接    ${xpath}
-    [Return]    ${final_url}
+    点击下游动态    ${xpath}
+    检查是否成功进入下游动态页面    ${xpath}
 
 点击四方资讯新闻快报流程
     [Arguments]    ${xpath}
@@ -58,3 +56,10 @@ Resource          ../PageObjectManager/四方资讯/宏观经济.robot
     [Arguments]    ${xpath}
     点击行业动态链接    ${xpath}
     检查是否成功进入行业动态页面    ${xpath}
+
+点击进入新闻top页面流程
+    [Arguments]    ${xpath}
+    点击头条链接    ${xpath}
+    检验是否进入行业动态页面    ${xpath}
+    关闭当前页面
+    切换到四方资讯页面
