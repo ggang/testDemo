@@ -41,9 +41,6 @@ test_sqare_xiayoudongtai_link
     sqareInformation    xiayoudongtai11
     sqareInformation    xiayoudongtai12
     sqareInformation    xiayoudongtai13
-    sqareInformation    xiayoudongtai14
-    sqareInformation    xiayoudongtai15
-    sqareInformation    xiayoudongtai16
     [Teardown]    关闭浏览器
 
 test_sqare_xinwen_link
@@ -113,4 +110,13 @@ test_image_link
     [Documentation]    四方资讯图片测试
     [Setup]    进入四方资讯流程
     四方资讯图片测试
+    [Teardown]    关闭浏览器
+
+test_sqare_top
+    [Documentation]    新闻资讯头条
+    [Setup]    进入四方资讯流程
+    [Template]    四方资讯top新闻链接测试
+    sqareInformation     topnews01
+    sqareInformation    topnews02
+    sqareInformation    topnews03
     [Teardown]    关闭浏览器
