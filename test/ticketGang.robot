@@ -15,5 +15,3 @@ test_ticket_login
     [Setup]    登录进入大象钢票流程
     申请钢票测试
     [Teardown]    关闭浏览器
-
-test_tiexian
