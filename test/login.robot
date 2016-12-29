@@ -16,7 +16,7 @@ login
     [Template]    登录测试
     [Timeout]
     13611873856    123456    member    pass
-    13918739640    123456    member    pass
+    13918739640    123456    normal     pass
     [Teardown]    会员登录.关闭浏览器
 
 test_cookie

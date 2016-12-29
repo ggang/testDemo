@@ -63,8 +63,6 @@ test_recomand_image
     imageGangCaiRecomed    image06
     imageGangCaiRecomed    image07
     imageGangCaiRecomed    image08
-    imageGangCaiRecomed    image09
-    imageGangCaiRecomed    image10
     [Teardown]    关闭浏览器
 
 test_recomand_table
@@ -100,8 +98,6 @@ test_bottom_opreation_guide
     BottomOperationGuide    guide06
     BottomOperationGuide    guide07
     BottomOperationGuide    guide08
-    BottomOperationGuide    guide09
-    BottomOperationGuide    guide10
     BottomAboutUs    about01
     BottomAboutUs    about02
     BottomAboutUs    about01
