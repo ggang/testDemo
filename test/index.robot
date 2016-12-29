@@ -100,8 +100,6 @@ test_bottom_opreation_guide
     BottomOperationGuide    guide08
     BottomAboutUs    about01
     BottomAboutUs    about02
-    BottomAboutUs    about01
-    BottomAboutUs    about02
     BottomAboutUs    about03
     BottomAboutUs    about04
     BottomAboutUs    about05
