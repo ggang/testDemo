@@ -101,7 +101,7 @@ Library           DateTime
     ${path}    set variable    ${CURDIR}${/}keyword_conf${/}url_xpath.conf
     ${src}    Read config    ${path}    ${name}    ${key}
     Execute Javascript    document.documentElement.scrollTop=1000
-    click element    xpath=${src}
+    wait until keyword succeeds    1min    2sec    click element    xpath=${src}
     [Return]    ${src}
 
 根据路径获取链接地址
