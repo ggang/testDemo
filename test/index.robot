@@ -101,8 +101,6 @@ test_bottom_opreation_guide
     BottomAboutUs    about01
     BottomAboutUs    about02
     BottomAboutUs    about03
-    BottomAboutUs    about04
-    BottomAboutUs    about05
     [Teardown]    关闭浏览器
 
 test_bottom_certficate _image
