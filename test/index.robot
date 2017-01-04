@@ -95,9 +95,6 @@ test_bottom_opreation_guide
     BottomOperationGuide    guide03
     BottomOperationGuide    guide04
     BottomOperationGuide    guide05
-    BottomOperationGuide    guide06
-    BottomOperationGuide    guide07
-    BottomOperationGuide    guide08
     BottomAboutUs    about01
     BottomAboutUs    about02
     BottomAboutUs    about03
